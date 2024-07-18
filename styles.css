@@ -1,0 +1,120 @@
+@import url(normalize.css);
+body {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat";
+}
+
+.container {
+  width: 1174px;
+  height: 707px;
+  display: flex;
+  align-items: end;
+  gap: 30px;
+}
+.container #table3 .header .title {
+  color: #fff;
+}
+
+.table {
+  background-color: #fff;
+  border: 1px solid #000000;
+  text-align: center;
+}
+.table .header {
+  transition-duration: 0.5s;
+  height: 150px;
+  background-color: #393d50;
+  position: relative;
+  align-content: center;
+  margin: 0 1px;
+}
+.table .header .title {
+  color: #00bcd4;
+  margin: 0;
+  font-size: 36px;
+}
+.table .header .money {
+  color: #fff;
+  margin: 5px 0 0;
+  font-size: 24px;
+}
+.table .header .per-month {
+  color: #5f727f;
+  font-size: 24px;
+}
+.table .header .best-plan {
+  color: #5f727f;
+}
+.table .header .new-item {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  color: #3a3a3a;
+  background-color: #ffcd37;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  align-content: center;
+}
+.table .content .subtitle {
+  height: 48px;
+  padding: 20px;
+}
+.table .content .subtitle .subtitle-first {
+  font-size: 24px;
+  color: #00bcd4;
+}
+.table .content p {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin: 10px 0;
+}
+.table .content ul {
+  list-style: none;
+  padding: 0;
+}
+.table .content ul li {
+  padding: 20px;
+  color: #5f727f;
+  align-content: center;
+}
+.table .content ul .change-bg {
+  background-color: #f4f6f7;
+}
+.table .content ul .crossed {
+  text-decoration-line: line-through;
+  color: #99a9b5;
+}
+.table .footer {
+  border-radius: 1px;
+  margin: 30px 0;
+}
+.table .footer button {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  border: solid 2px #00bcd4;
+  background-color: #fff;
+  color: #00bcd4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.table .footer button:hover {
+  background-color: #00bcd4;
+  color: #fff;
+}
+.table:hover .header {
+  padding: 20px;
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

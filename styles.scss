@@ -1,0 +1,139 @@
+@import url(normalize.css);
+
+body {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat";
+}
+
+.container {
+  width: 1174px;
+  height: 707px;
+
+  display: flex;
+  align-items: end;
+  gap: 30px;
+
+  #table3 {
+    .header {
+      .title {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.table {
+  // width: 366px;
+  // height: 677px;
+  background-color: #fff;
+  border: 1px solid #000000;
+  text-align: center;
+
+  .header {
+    transition-duration: 0.5s;
+    height: 150px;
+    background-color: #393d50;
+    position: relative;
+    align-content: center;
+    margin: 0 1px;
+    .title {
+      color: #00bcd4;
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .money {
+      color: #fff;
+      margin: 5px 0 0;
+      font-size: 24px;
+    }
+    .per-month {
+      color: #5f727f;
+      font-size: 24px;
+    }
+    .best-plan {
+      color: #5f727f;
+    }
+    .new-item {
+      position: absolute;
+      font-size: 14px;
+      font-weight: bold;
+      color: #3a3a3a;
+      background-color: #ffcd37;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      align-content: center;
+    }
+  }
+
+  .content {
+    .subtitle {
+      height: 48px;
+      padding: 20px;
+      .subtitle-first {
+        font-size: 24px;
+        color: #00bcd4;
+      }
+    }
+    p {
+      color: #7f8c8d;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        // height: 60px;
+        padding: 20px;
+        color: #5f727f;
+        align-content: center;
+      }
+      .change-bg {
+        background-color: #f4f6f7;
+      }
+      .crossed {
+        text-decoration-line: line-through;
+        color: #99a9b5;
+      }
+    }
+  }
+  .footer {
+    border-radius: 1px;
+    margin: 30px 0;
+    button {
+      // width: 122px;
+      // height: 44px;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      border: solid 2px #00bcd4;
+      background-color: #fff;
+      color: #00bcd4;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #00bcd4;
+        color: #fff;
+      }
+    }
+  }
+  &:hover {
+    .header {
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    flex-direction: column;
+  }
+}
