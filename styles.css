@@ -1,5 +1,6 @@
-@import url(normalize.css);
+@import "normalize.css";
 body {
+  height: 707px;
   margin: 50px;
   display: flex;
   justify-content: center;
@@ -82,7 +83,7 @@ body {
   color: #5f727f;
   align-content: center;
 }
-.table .content ul .change-bg {
+.table .content ul li:nth-child(odd) {
   background-color: #f4f6f7;
 }
 .table .content ul .crossed {
@@ -114,6 +115,8 @@ body {
 @media screen and (max-width: 620px) {
   .container {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 }
 
