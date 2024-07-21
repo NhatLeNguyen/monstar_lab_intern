@@ -3,7 +3,6 @@ const slides = Array.from(document.querySelectorAll(".carousel-item"));
 
 const left = document.querySelector(".fa-arrow-left");
 const right = document.querySelector(".fa-arrow-right");
-
 let currentIndex = 0;
 
 function updateCarousel() {
@@ -17,12 +16,24 @@ function updateCarousel() {
 
 left.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateCarousel();
+  carousel.style.transition = "transform 0.5s ease";
+  carousel.style.transform = `translateX(300px)`;
+  setTimeout(() => {
+    carousel.style.transition = "none";
+    carousel.style.transform = `translateX(0)`;
+    updateCarousel();
+  }, 200);
 });
 
 right.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
+  carousel.style.transition = "transform 0.5s ease";
+  carousel.style.transform = `translateX(-300px)`;
+  setTimeout(() => {
+    carousel.style.transition = "none";
+    carousel.style.transform = `translateX(0)`;
+    updateCarousel();
+  }, 200);
 });
 
 updateCarousel();
