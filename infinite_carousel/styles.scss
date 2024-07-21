@@ -1,0 +1,44 @@
+@import "normalize.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 950px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .fa {
+    position: absolute;
+    top: 50%;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .fa-arrow-left {
+    left: 10px;
+  }
+
+  .fa-arrow-right {
+    right: 10px;
+  }
+
+  .carousel-slides {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+
+    .carousel-item {
+      .img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
