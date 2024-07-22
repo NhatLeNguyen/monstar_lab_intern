@@ -8,11 +8,11 @@ body {
 }
 
 main {
-  overflow: hidden;
   width: 1000px;
   display: flex;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 main .fa {
   font-size: 24px;
@@ -47,12 +47,26 @@ main .carousel-slides .carousel-item .img {
   width: 15px;
   height: 15px;
   margin: 0 5px;
-  background-color: #bbb;
+  background-color: #bbbbbb;
   border-radius: 50%;
   cursor: pointer;
 }
-.dots .dot.active {
+.dots .dot:active {
   background-color: #717171;
+}
+
+@media screen and (max-width: 620px) {
+  main {
+    width: 100%;
+  }
+  main .fa {
+    margin: 0 20px;
+    font-size: 20px;
+  }
+  main .carousel-slides .carousel-item .img {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

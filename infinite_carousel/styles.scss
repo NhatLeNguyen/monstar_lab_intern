@@ -9,11 +9,12 @@ body {
 }
 
 main {
-  overflow: hidden;
   width: 1000px;
   display: flex;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+
   .fa {
     font-size: 24px;
     z-index: 1;
@@ -51,12 +52,31 @@ main {
     width: 15px;
     height: 15px;
     margin: 0 5px;
-    background-color: #bbb;
+    background-color: #bbbbbb;
     border-radius: 50%;
     cursor: pointer;
 
-    &.active {
+    &:active {
       background-color: #717171;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  main {
+    width: 100%;
+    .fa {
+      margin: 0 20px;
+      font-size: 20px;
+    }
+
+    .carousel-slides {
+      .carousel-item {
+        .img {
+          width: 400px;
+          height: 400px;
+        }
+      }
     }
   }
 }
