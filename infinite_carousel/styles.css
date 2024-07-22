@@ -1,0 +1,72 @@
+@import "normalize.css";
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+main .fa {
+  font-size: 24px;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+main .fa-arrow-left {
+  left: 0px;
+}
+main .fa-arrow-right {
+  right: 0px;
+}
+main .carousel-slides {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+main .carousel-slides .carousel-item .img {
+  margin: 0 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.dots .dot {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: #bbbbbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dots .dot:active {
+  background-color: #717171;
+}
+
+@media screen and (max-width: 620px) {
+  main {
+    width: 100%;
+  }
+  main .fa {
+    margin: 0 20px;
+    font-size: 20px;
+  }
+  main .carousel-slides .carousel-item .img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
