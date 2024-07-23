@@ -1,15 +1,19 @@
+const container = document.querySelector(".container");
 const carousel = document.querySelector(".carousel");
 const tables = Array.from(document.querySelectorAll(".table"));
 const arrowLeftButton = document.querySelector(".fa-arrow-left");
 const arrowRightButton = document.querySelector(".fa-arrow-right");
 
 let currentIndex = 0;
-const tablesToShow = 3;
+let tablesToShow = 5;
+let tableWidth = 380;
 
 function updateCarousel() {
   carousel.innerHTML = "";
-  for (let i = 0; i < tablesToShow; i++) {
-    let tableIndex = (currentIndex + i) % tables.length;
+  const totalTables = tables.length;
+
+  for (let i = -1; i < tablesToShow; i++) {
+    let tableIndex = (currentIndex + i + totalTables) % totalTables;
     let tableClone = tables[tableIndex].cloneNode(true);
     carousel.appendChild(tableClone);
   }
@@ -24,7 +28,7 @@ function handleArrowButtonClick(direction) {
 
   carousel.style.transition = "transform 0.5s ease";
   carousel.style.transform =
-    direction === "left" ? `translateX(340px)` : `translateX(-340px)`;
+    direction === "left" ? `translateX(380px)` : `translateX(-380px)`;
 
   setTimeout(() => {
     carousel.style.transition = "none";
@@ -42,11 +46,11 @@ function updateTablesToShow() {
   if (window.innerWidth < 620) {
     tablesToShow = 1;
   } else {
-    tablesToShow = 3;
+    tablesToShow = 5;
   }
   updateCarousel();
 }
+
 window.addEventListener("resize", updateTablesToShow);
-updateCarousel();
 
 updateTablesToShow();

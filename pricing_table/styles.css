@@ -12,6 +12,7 @@ body {
   height: 720px;
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: end;
   overflow: hidden;
 }
@@ -30,18 +31,19 @@ body {
   right: 10px;
 }
 .container .carousel {
-  justify-content: center;
   align-items: end;
   display: flex;
   transition: transform 0.5s ease;
   width: 1174px;
+  margin-right: 750px;
 }
 .container .table {
+  flex: 0 0 300px;
   width: 300px;
   background-color: #fff;
   border: 1px solid #000000;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 40px;
 }
 .container .table .header {
   transition-duration: 0.5s;
@@ -139,10 +141,11 @@ body {
     width: 350px;
     position: relative;
   }
-  .carousel {
+  .container .carousel {
     overflow: hidden;
+    margin-right: 0;
   }
-  .table {
+  .container .table {
     height: 720px;
     align-content: end;
     flex: 0 0 100%;
