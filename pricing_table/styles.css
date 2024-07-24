@@ -39,7 +39,6 @@ body {
 }
 .container .table {
   flex: 0 0 300px;
-  width: 300px;
   background-color: #fff;
   border: 1px solid #000000;
   text-align: center;

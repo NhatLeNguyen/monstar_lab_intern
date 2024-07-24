@@ -8,6 +8,9 @@ let currentIndex = 0;
 let tablesToShow = 5;
 let tableWidth = 380;
 
+let isMoving = false;
+let clickQueue = [];
+
 function updateCarousel() {
   carousel.innerHTML = "";
   const totalTables = tables.length;
@@ -19,7 +22,14 @@ function updateCarousel() {
   }
 }
 
-function handleArrowButtonClick(direction) {
+function handleArrowButtonClick(direction, clickCount = 1) {
+  if (isMoving) {
+    clickQueue.push({ direction, clickCount });
+    return;
+  }
+
+  isMoving = true;
+
   if (direction === "left") {
     currentIndex = (currentIndex - 1 + tables.length) % tables.length;
   } else if (direction === "right") {
@@ -28,19 +38,43 @@ function handleArrowButtonClick(direction) {
 
   carousel.style.transition = "transform 0.5s ease";
   carousel.style.transform =
-    direction === "left" ? `translateX(380px)` : `translateX(-380px)`;
+    direction === "left"
+      ? `translateX(${tableWidth}px)`
+      : `translateX(-${tableWidth}px)`;
 
   setTimeout(() => {
     carousel.style.transition = "none";
     carousel.style.transform = `translateX(0)`;
+
     updateCarousel();
+    isMoving = false;
+
+    if (clickCount > 1) {
+      setTimeout(() => handleArrowButtonClick(direction, clickCount - 1), 0);
+    } else if (clickQueue.length > 0) {
+      const nextMove = clickQueue.shift();
+      handleArrowButtonClick(nextMove.direction, nextMove.clickCount);
+    }
   }, 500);
 }
 
-arrowLeftButton.addEventListener("click", () => handleArrowButtonClick("left"));
-arrowRightButton.addEventListener("click", () =>
-  handleArrowButtonClick("right")
-);
+let clickTimer;
+let clickCounter = 0;
+let lastClickDirection;
+
+function handleClick(direction) {
+  clickCounter++;
+  lastClickDirection = direction;
+
+  clearTimeout(clickTimer);
+  clickTimer = setTimeout(() => {
+    handleArrowButtonClick(lastClickDirection, clickCounter);
+    clickCounter = 0;
+  }, 500);
+}
+
+arrowLeftButton.addEventListener("click", () => handleClick("left"));
+arrowRightButton.addEventListener("click", () => handleClick("right"));
 
 function updateTablesToShow() {
   if (window.innerWidth < 620) {
