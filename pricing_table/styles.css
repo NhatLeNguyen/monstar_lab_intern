@@ -100,12 +100,22 @@ body {
   padding: 0;
 }
 .container .table .content ul li {
+  width: 260px;
   padding: 20px;
   color: #5f727f;
   align-content: center;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .container .table .content ul li:nth-child(odd) {
   background-color: #f4f6f7;
+}
+.container .table .content ul li:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: visible;
 }
 .container .table .content ul .crossed {
   text-decoration-line: line-through;

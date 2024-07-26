@@ -20,6 +20,7 @@ function updateCarousel() {
     let tableClone = tables[tableIndex].cloneNode(true);
     carousel.appendChild(tableClone);
   }
+  console.log(currentIndex);
 }
 
 function handleArrowButtonClick(direction, clickCount = 1) {
@@ -67,8 +68,10 @@ function handleClick(direction) {
   lastClickDirection = direction;
 
   clearTimeout(clickTimer);
+
   clickTimer = setTimeout(() => {
     handleArrowButtonClick(lastClickDirection, clickCounter);
+    console.log("so lan click: " + clickCounter);
     clickCounter = 0;
   }, 500);
 }
@@ -88,3 +91,11 @@ function updateTablesToShow() {
 window.addEventListener("resize", updateTablesToShow);
 
 updateTablesToShow();
+
+const listItems = document.querySelectorAll("li");
+
+listItems.forEach((item) => {
+  if (item.scrollWidth > item.clientWidth) {
+    item.setAttribute("data", item.textContent);
+  }
+});

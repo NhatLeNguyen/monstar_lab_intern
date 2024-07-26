@@ -103,14 +103,43 @@ body {
       ul {
         list-style: none;
         padding: 0;
-
         li {
+          width: 260px;
           padding: 20px;
           color: $gray-light;
           align-content: center;
+          position: relative;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          // -webkit-line-clamp: 1;
+          // line-clamp: 1;
+          // -webkit-box-orient: vertical;
+          // overflow: hidden;
+          // display: -webkit-box;
 
           &:nth-child(odd) {
             background-color: $gray-lighter;
+          }
+          &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: visible;
+
+            //   &:after {
+            //     content: attr(data);
+            //     word-wrap: break-word;
+            //     white-space: normal;
+            //     position: absolute;
+            //     background-color: $white;
+            //     border: 1px solid #ddd;
+            //     max-width: 270px;
+            //     top: 0;
+            //     left: 5%;
+            //     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            //   }
+            // }
           }
         }
 
