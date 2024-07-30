@@ -9,6 +9,9 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.7.0/nouislider.min.js"></script>
+
 </head>
 
 <body>
@@ -95,10 +98,814 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </header>
+    <main>
+        <div class="main-container">
+            <aside class="sidebar">
+                <p>CATEGORIES</p>
+                <ul class="category-list">
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            VERSION <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            LOREM IPSUM <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            PROIN <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="subcategory-list">
+                            <li>July 2015 <i class="fas fa-chevron-down"></i></li>
+                            <li>January 2013 <i class="fas fa-chevron-down"></i></li>
+                            <li>March 2012 <i class="fas fa-chevron-down"></i></li>
+                            <li>January 2012 <i class="fas fa-chevron-down"></i></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            GRAVIDA <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            NIBH VEL VELIT <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            AUCTOR <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                </ul>
+                <div class="search">
+                    <input class="search-input" type="text" name="search" placeholder="Search for products... ">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
 
-    <main></main>
-    <footer></footer>
+
+                <div class="filter-section">
+                    <p>FILTER BY PRICE</p>
+                    <div class="price-filter">
+                        <div id="price-slider"></div>
+                        <div class="button-priceRange">
+                            <button class="filter-button">FILTER</button>
+                            <div id="price-range">Price: $345 — $1640</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <p>FILTER BY COLOR </p>
+                    <select>
+                        <option>Any Color</option>
+                        <option>Red</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                    </select>
+                </div>
+
+                <div class="filter-section">
+                    <p>FILTER BY SIZE</p>
+                    <select>
+                        <option>Any Size</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+                </div>
+
+                <div class="filter-section">
+                    <p>RECENTLY VIEWED</p>
+                    <div class="recently-viewed">
+                        <div class="recent-item">
+                            <div class="item-image"></div>
+                            <div class="item-info">
+                                <p>Product Title Here</p>
+                                <div class="star-rate">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <p>$35.00</p>
+                            </div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="item-image"></div>
+                            <div class="item-info">
+                                <p>Product Title Here</p>
+                                <div class="star-rate">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div>
+                                <p>$35.00 - $89.99</p>
+                            </div>
+                        </div>
+                        <div class="recent-item">
+                            <div class="item-image"></div>
+                            <div class="item-info">
+                                <p>Product Title Here</p>
+                                <p>$35.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <p>PRODUCT TAGS</p>
+                        <div class="product-tag">
+                            <div class="tag">morbi</div>
+                            <div class="tag">accumsan</div>
+                            <div class="tag">ipsum</div>
+                            <div class="tag">velit</div>
+                            <div class="tag">nam</div>
+                            <div class="tag">tellus</div>
+                            <div class="tag">aodio</div>
+                            <div class="tag">tincidunt</div>
+                            <div class="tag">auctor</div>
+                            <div class="tag">aornare odi</div>
+                            <div class="tag">morbi</div>
+                            <div class="tag">auctor</div>
+                            <div class="tag">aornare odi</div>
+                            <div class="tag">morbi</div>
+                            <div class="tag">tellus</div>
+                            <div class="tag">aodio</div>
+                            <div class="tag">morbi</div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <p>FEATURED PRODUCTS</p>
+                        <div class="featured-product">
+                            <div class="f-p-item">
+                                <div class="f-p-i-image"></div>
+                                <div class="f-p-i-info">
+                                    <p>Product Title Here</p>
+                                    <p>$35.00 - $89.99</p>
+                                </div>
+                            </div>
+                            <div class="f-p-item">
+                                <div class="f-p-i-image">
+                                    <div class="discount-label">%</div>
+                                </div>
+                                <div class="f-p-i-info">
+                                    <p>Product Title Here</p>
+                                    <p>$35.00 - $1289.99</p>
+                                </div>
+                            </div>
+                            <div class="f-p-item">
+                                <div class="f-p-i-image">
+                                    <div class="discount-label">%</div>
+                                </div>
+
+                                <div class="f-p-i-info">
+                                    <p>Product Title Here</p>
+                                    <p>$35.00 - $89.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon-section">
+                        <div class="coupon-content">
+                            <p class="money-coupon">$5</p>
+                            <p class="coupon-text">COUPON</p>
+                            <p class="coupon-free">FOR FREE</p>
+                            <p class="coupon-description">Just Signup For Our Newsletter And Get $5 To Your Account</p>
+                            <input class="email-input" type="email" placeholder="Enter Your Email..." />
+                            <button class="sign-up-button">SIGN UP ME!</button>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <p>CARD</p>
+                        <div class="featured-product">
+                            <div class="f-p-item">
+                                <div class="f-p-i-image"></div>
+                                <div class="f-p-i-info">
+                                    <p>Product Title Here</p>
+                                    <p>1 x $35.00 - $89.99</p>
+                                </div>
+                            </div>
+                            <div class="f-p-item">
+                                <div class="f-p-i-image">
+                                    <div class="discount-label">%</div>
+                                </div>
+                                <div class="f-p-i-info">
+                                    <p>Product Title Here</p>
+                                    <p>1 x $35.00 - $1289.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subtotal">
+                        <div class="subtotal-title">Subtotal:</div>
+                        <div class="subtotal-price">$2589.99</div>
+                    </div>
+
+                    <div class="cart-actions">
+                        <button class="view-cart">VIEW CART</button>
+                        <button class="checkout">CHECKOUT</button>
+                    </div>
+                </div>
+            </aside>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="title-items">
+                        <h3 class="category-title">SALES</h3>
+                        <p class="category-items">9 items</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="title-items">
+                        <h3 class="category-title">DRESSES</h3>
+                        <p class="category-items">19 items</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="title-items">
+                        <h3 class="category-title">LINGERIE</h3>
+                        <p class="category-items">5 items</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="title-items">
+                        <h3 class="category-title">SHIRTS</h3>
+                        <p class="category-items">9 items</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="title-items">
+                        <h3 class="category-title">ACCESSORIES</h3>
+                        <p class="category-items">19 items</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="title-items">
+                        <h3 class="category-title">BAGS</h3>
+                        <p class="category-items">5 items</p>
+                    </div>
+                </div>
+                <div class="grid-navigation">
+                    <button class="nav-button">&#10094;</button>
+                    <button class="nav-button">&#10095;</button>
+                </div>
+                <div class="sort-product">
+                    <div class="sort-filter">
+                        <div class="sort-switch">
+                            <select>
+                                <option>Default Shorting</option>
+                                <option>Hehe</option>
+                                <option>Kkeke</option>
+                                <option>Lelele</option>
+                            </select>
+                        </div>
+                        <div class="desc-asc">DESC</div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="desc-asc">ASC</div>
+                    </div>
+                    <div class="show-result">
+                        <div class="show-result-text">Showing 1-12 of 17 results</div>
+                        <select>
+                            <option>Show 12 on page</option>
+                            <option>Hehe</option>
+                            <option>Kkeke</option>
+                            <option>Lelele</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="star-rate">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="product-title">BLACK IMPRESSION</div>
+                        <p class="product-price">$34.00 - $89.99</p>
+                        <div class="product-actions">
+                            <div class="view-cart">View Cart</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="product-title has-line">DENIM CLASSY SHORTS</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <div class="view-wishlist">View Wishlist</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="product-title has-line">GOLDEN HEELS </div>
+                        <p class="product-price">$35.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="star-rate">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="product-title">BLACK IMPRESSION</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+
+                        <div class="product-title has-line">DENIM CLASSY SHORTS</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="product-title has-line">GOLDEN HEELS</div>
+                        <p class="product-price">$35.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="star-rate">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="product-title">BLACK IMPRESSION</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+
+                        <div class="product-title has-line">DENIM CLASSY SHORTS</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="product-title has-line">GOLDEN HEELS</div>
+                        <p class="product-price">$35.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+
+                        <div class="product-title has-line">DENIM CLASSY SHORTS</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="product-title has-line">GOLDEN HEELS</div>
+                        <p class="product-price">$35.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="product-title has-line">DENIM CLASSY SHORTS</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+
+                        <div class="product-title has-line">DENIM CLASSY SHORTS</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="product-title has-line">GOLDEN HEELS</div>
+                        <p class="product-price">$35.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-details">
+                        <div class="product-title has-line">DENIM CLASSY SHORTS</div>
+                        <p class="product-price">$34.00 – $89.99</p>
+                        <div class="product-actions">
+                            <i class="fas fa-shopping-cart"></i>
+                            <i class="far fa-file-alt"></i>
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-number">
+                    <i class="fas fa-chevron-left"></i>
+                    <div class="page active">1</div>
+                    <div class="page">2</div>
+                    <div class="page">3</div>
+                    <div class="page">4</div>
+                    <div class="page">5</div>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="brand-section">
+            <div class="brand-section-content">
+                <div class="brands">OUR BRANDS</div>
+                <div class="brand-logo">
+                    <div class="brand-circle"></div>
+                    <div class="brand-circle"></div>
+                    <div class="brand-circle"></div>
+                    <div class="brand-circle"></div>
+                    <div class="brand-circle"></div>
+                </div>
+                <div class="dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="latest-news-section">
+            <div class="latest-news-title">LATEST NEWS</div>
+            <div class="blog-posts">
+                <div class="blog-post">
+                    <div class="blog-post-image"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <div>By <a class="author" href="#">Admin</a></div>
+                            <div class="blog-interact">
+                                <span class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <span>0</span>
+                                </span>
+                                <span class="heart">
+                                    <i class="fas fa-heart"></i>
+                                    <span>0</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="blog-content-title"><b>5 MAY:</b> SIMPLE BLOG POST</div>
+                        <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem.</p>
+                        <div class="share-and-readMore"> <i class="fas fa-share-alt-square"></i>
+                            <button class="read-more">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-post">
+                    <div class="blog-post-image"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <div>By <a class="author" href="#">Admin</a></div>
+                            <div class="blog-interact">
+                                <span class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <span>0</span>
+                                </span>
+                                <span class="heart">
+                                    <i class="fas fa-heart"></i>
+                                    <span>0</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="blog-content-title"><b>5 MAY:</b> SIMPLE BLOG POST</div>
+                        <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem.</p>
+                        <div class="share-and-readMore"> <i class="fas fa-share-alt-square"></i>
+                            <button class="read-more">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-image"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <div>By <a class="author" href="#">Admin</a></div>
+                            <div class="blog-interact">
+                                <span class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <span>0</span>
+                                </span>
+                                <span class="heart">
+                                    <i class="fas fa-heart"></i>
+                                    <span>0</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="blog-content-title"><b>5 MAY:</b> SIMPLE BLOG POST</div>
+                        <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem.</p>
+                        <div class="share-and-readMore"> <i class="fas fa-share-alt-square"></i>
+                            <button class="read-more">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <div class="blog-post-image"></div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <div>By <a class="author" href="#">Admin</a></div>
+                            <div class="blog-interact">
+                                <span class="comment">
+                                    <i class="fas fa-comment"></i>
+                                    <span>0</span>
+                                </span>
+                                <span class="heart">
+                                    <i class="fas fa-heart"></i>
+                                    <span>0</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="blog-content-title"><b>5 MAY:</b> SIMPLE BLOG POST</div>
+                        <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem.</p>
+                        <div class="share-and-readMore">
+                            <i class="fas fa-share-alt-square"></i>
+                            <button class="read-more">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="info-section">
+            <div class="info-box we-accept">
+                <div class="title-icon">
+                    <div class="info-box-title">WE ACCEPT</div>
+                    <span class="icon-credit-card"></span>
+                </div>
+                <div class="info-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et.</p>
+                    <div class="payment-icons">
+                        <div class="payment-icon"></div>
+                        <div class="payment-icon"></div>
+                        <div class="payment-icon"></div>
+                        <div class="payment-icon"></div>
+                        <div class="payment-icon"></div>
+                        <div class="payment-icon"></div>
+                        <div class="payment-icon"></div>
+                        <div class="payment-icon"></div>
+                        <div class="payment-icon"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-box shipping-methods">
+                <div class="title-icon">
+                    <div class="info-box-title">SHIPPING METHODS</div>
+                    <span class="icon-shipping"></span>
+                </div>
+                <div class="info-content">
+                    <ul>
+                        <li><span class="icon-check"></span> Lorem ipsum dolor sit amet, consectetur</li>
+                        <li><span class="icon-check"></span> Adipiscing elit, sed do eiusmod tempor</li>
+                        <li><span class="icon-check"></span> Incididunt ut labore et dolore magna aliqua</li>
+                        <li><span class="icon-check"></span> Enim ad minim veniam, quis nostrud exercitation</li>
+                        <li><span class="icon-check"></span> Ullamco laboris nisi ut aliquip ex ea commodo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="recommended-product">
+            <div class="new-product">
+                <div class="recommended-title">NEW PRODUCT</div>
+                <div class="new-product-list">
+                    <div class="product-list-item">
+                        <div class="p-l-i-image"></div>
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $89.99</p>
+                            </div>
+                            <div class="star-rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list-item">
+                        <div class="p-l-i-image">
+                        </div>
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $1289.99</p>
+                            </div>
+                            <div class="star-rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list-item">
+                        <div class="p-l-i-image">
+                            <div class="discount-label">%</div>
+                        </div>
+
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $89.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-rated-product">
+                <div class="recommended-title">TOP RATED PRODUCTS</div>
+                <div class="new-product-list">
+                    <div class="product-list-item">
+                        <div class="p-l-i-image"></div>
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $89.99</p>
+                            </div>
+                            <div class="star-rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list-item">
+                        <div class="p-l-i-image">
+                            <div class="discount-label">%</div>
+                        </div>
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $1289.99</p>
+                            </div>
+                            <div class="star-rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list-item">
+                        <div class="p-l-i-image">
+                        </div>
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $89.99</p>
+                            </div>
+                            <div class="star-rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="on-sale-product">
+                <div class="recommended-title">ON SALE</div>
+                <div class="new-product-list">
+                    <div class="product-list-item">
+                        <div class="p-l-i-image"></div>
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $89.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list-item">
+                        <div class="p-l-i-image">
+                            <div class="discount-label">%</div>
+                        </div>
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $1289.99</p>
+                            </div>
+                            <div class="star-rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list-item">
+                        <div class="p-l-i-image">
+                        </div>
+                        <div class="p-l-i-info">
+                            <div class="title-and-cost">
+                                <p>Product Title Here</p>
+                                <p>$35.00 - $89.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-text"><i class="far fa-gem"></i>
+                <b>
+                    SELL MORE
+                </b>
+                &nbsp;WITH THE GEM SHOP
+            </div>
+            <button class="purchase-now">PURCHASE NOW!</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid-container">hehe</div>
+        <div class="bottom-footer">
+            <div class="bottom-footer-content">© Copyright 2015 CodexThemes</div>
+        </div>
+    </footer>
 </body>
 <script src="javascript/header/slider.js"></script>
+<script src="javascript/main/main.js"></script>
 
 </html>

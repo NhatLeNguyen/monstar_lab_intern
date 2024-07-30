@@ -44,20 +44,14 @@
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-
   .slide {
     min-width: 100%;
     display: none;
-    justify-content: center;
     align-items: center;
     text-align: right;
     color: #ffffff;
-    .active {
-      display: flex;
-    }
     .slider-content {
-      padding: 10px 300px;
-
+      padding: 10px 350px;
       .percent {
         font-size: 100px;
         font-weight: 700;
@@ -71,9 +65,5 @@
         }
       }
     }
-  }
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
   }
 }

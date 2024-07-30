@@ -1,0 +1,342 @@
+@import "./categoryList";
+@import "./search";
+@import "./filterSection";
+@import "./couponSection";
+@import "./subtotal";
+@import "./cartAction";
+
+.sidebar {
+  width: 25%;
+  padding-right: 50px;
+  color: #3c3950;
+
+  p {
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  // .category-list {
+  //   list-style: none;
+  //   padding: 0;
+  //   margin: 0;
+  //   font-size: 14px;
+  //   font-weight: 700;
+  //   cursor: pointer;
+  //   .category-item {
+  //     border: 1px solid #dfe5e8;
+  //     padding: 5px 20px;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     font-size: 14px;
+  //     letter-spacing: 1px;
+  //     line-height: 50px;
+  //     color: #3c3950;
+  //     font-weight: 700;
+  //     &:hover {
+  //       color: #ff0000;
+  //     }
+  //     &.active {
+  //       color: #00bcd4;
+  //     }
+  //   }
+  //   .subcategory-list {
+  //     background-color: #f3f5f7;
+  //     padding: 0;
+  //     li {
+  //       display: flex;
+  //       justify-content: space-between;
+  //       padding: 5px 20px;
+  //       border: 1px solid #dfe5e8;
+  //       padding: 20px 20px 20px 40px;
+  //       &:hover {
+  //         color: #ff0000;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // .search {
+  //   margin-top: 60px;
+  //   position: relative;
+  //   display: flex;
+  //   align-items: center;
+  //   .search-input {
+  //     width: 100%;
+  //     height: 40px;
+  //     padding: 0 10px;
+  //     border-radius: 3px;
+  //     background-color: #ffffff;
+  //     border: 2px solid #dfe5e8;
+  //   }
+  //   .search-icon {
+  //     position: absolute;
+  //     right: 10px;
+  //     pointer-events: none;
+  //     color: #99a9b5;
+  //   }
+  // }
+
+  // .filter-section {
+  //   margin-top: 60px;
+
+  //   p {
+  //     font-size: 16px;
+  //     font-weight: 700;
+  //     cursor: pointer;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+
+  //     .fa-chevron-down,
+  //     .fa-chevron-up {
+  //       margin-left: 10px;
+  //     }
+  //   }
+
+  //   .price-filter {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+
+  //     .button-priceRange {
+  //       display: flex;
+  //       justify-content: space-between;
+  //       width: 100%;
+  //       .filter-button {
+  //         background-color: #ffffff;
+  //         padding: 5px 10px;
+  //         border-radius: 3px;
+  //         border: 2px solid #00bcd4;
+
+  //         font-size: 14px;
+  //         letter-spacing: 1px;
+  //         color: #00bcd4;
+  //         font-weight: 700;
+  //         &:hover {
+  //           cursor: pointer;
+  //           background-color: #00bcd4;
+  //           color: #fff;
+  //         }
+  //       }
+  //       #price-range {
+  //         display: flex;
+  //         align-items: center;
+  //         font-size: 16px;
+  //         color: #99a9b5;
+  //         font-weight: 400;
+  //         white-space: nowrap;
+  //       }
+  //     }
+  //     #price-slider {
+  //       width: 100%;
+  //       margin: 10px 0;
+  //     }
+  //   }
+
+  //   select {
+  //     width: 100%;
+  //     padding: 10px;
+  //     border: 1px solid #dfe5e8;
+  //     cursor: pointer;
+
+  //     &:hover {
+  //       border-color: #00bcd4;
+  //     }
+  //   }
+
+  //   .recently-viewed {
+  //     background-color: #f0f3f2;
+  //     .recent-item {
+  //       display: flex;
+  //       align-items: center;
+  //       padding: 20px 10px;
+  //       border: 1px solid #dfe5e8;
+  //       .item-image {
+  //         width: 60px;
+  //         height: 60px;
+  //         background-color: #99a9b5;
+  //         margin-right: 10px;
+  //         border-radius: 50%;
+  //       }
+
+  //       .item-info {
+  //         padding: 0 10px;
+  //         display: flex;
+  //         flex-direction: column;
+  //         align-items: flex-start;
+
+  //         p {
+  //           margin: 0;
+  //           font-size: 14px;
+  //           color: #5f727f;
+
+  //           &:first-child {
+  //             font-weight: 700;
+  //           }
+  //         }
+  //       }
+  //       .fa-star {
+  //         margin-bottom: 10px;
+  //         color: #a7a9aa;
+  //       }
+  //       .checked {
+  //         color: #ffc107;
+  //       }
+  //     }
+  //   }
+
+  //   .product-tag {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     cursor: pointer;
+  //     .tag {
+  //       background-color: rgba(153, 169, 181, 0);
+  //       border: 1px solid #99a9b5;
+  //       margin: 5px;
+  //       padding: 5px;
+  //     }
+  //   }
+  //   .featured-product {
+  //     margin-top: 20px;
+  //     .f-p-item {
+  //       display: flex;
+  //       align-items: center;
+  //       margin: 20px 0;
+  //       border: 1px solid #dfe5e8;
+  //       position: relative;
+  //       .f-p-i-image {
+  //         width: 80px;
+  //         height: 80px;
+  //         background-color: #c5c5c5;
+  //         margin-right: 10px;
+  //         position: relative;
+  //         .discount-label {
+  //           position: absolute;
+  //           top: 15px;
+  //           left: 60px;
+  //           background-color: #00bcd4;
+  //           color: white;
+  //           border-radius: 50%;
+  //           padding: 5px 10px;
+  //           font-size: 12px;
+  //           font-weight: 700;
+  //         }
+  //       }
+  //       .f-p-i-info {
+  //         padding: 0 10px;
+  //         display: flex;
+  //         flex-direction: column;
+  //         align-items: flex-start;
+  //         p {
+  //           margin: 5px;
+  //           font-size: 14px;
+  //           color: #5f727f;
+
+  //           &:first-child {
+  //             font-weight: 700;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .coupon-section {
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background-color: #ff5176;
+  //   font-weight: 700;
+  //   margin-top: 60px;
+
+  //   .coupon-content {
+  //     margin: 20px;
+  //     border: 6px solid #ffffff;
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //     color: #ffffff;
+  //     .money-coupon {
+  //       font-size: 120px;
+  //       letter-spacing: 6px;
+  //     }
+  //     .coupon-text {
+  //       font-size: 36px;
+  //       letter-spacing: 2px;
+  //     }
+  //     .coupon-free {
+  //       color: #ffc107;
+  //       font-size: 36px;
+  //       letter-spacing: 2px;
+  //     }
+  //     .coupon-description {
+  //       font-size: 24px;
+  //       line-height: 37px;
+  //       color: #ffffff;
+  //       font-weight: 300;
+  //       text-align: center;
+  //       margin: 10px 0;
+  //     }
+  //     .email-input,
+  //     .sign-up-button {
+  //       padding: 10px;
+  //       margin: 10px 0;
+  //     }
+  //     .email-input {
+  //       border: none;
+  //     }
+
+  //     .sign-up-button {
+  //       background-color: black;
+  //       color: white;
+  //       border: none;
+  //       cursor: pointer;
+  //       padding: 10px 55px;
+  //       &:hover {
+  //         background-color: #333;
+  //       }
+  //     }
+  //   }
+  // }
+  // .subtotal {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   margin-top: 30px;
+  //   .subtotal-title {
+  //     font-size: 16px;
+  //     line-height: 25px;
+  //     color: #5f727f;
+  //     font-weight: 400;
+  //   }
+  //   .subtotal-price {
+  //     font-size: 24px;
+  //     line-height: 37px;
+  //     color: #3c3950;
+  //     font-weight: 300;
+  //   }
+  // }
+  // .cart-actions {
+  //   margin-top: 30px;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   cursor: pointer;
+  //   .view-cart,
+  //   .checkout {
+  //     padding: 5px 20px;
+  //     border-radius: 3px;
+  //   }
+  //   .view-cart {
+  //     background-color: #00bcd4;
+  //     color: #ffffff;
+  //   }
+  //   .checkout {
+  //     background-color: rgba(0, 188, 212, 0);
+  //     border: 2px solid #46485c;
+  //   }
+  // }
+}

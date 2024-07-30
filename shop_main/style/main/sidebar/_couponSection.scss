@@ -1,0 +1,58 @@
+.coupon-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5176;
+  font-weight: 700;
+  margin-top: 60px;
+
+  .coupon-content {
+    margin: 20px;
+    border: 6px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    .money-coupon {
+      font-size: 120px;
+      letter-spacing: 6px;
+    }
+    .coupon-text {
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+    .coupon-free {
+      color: #ffc107;
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+    .coupon-description {
+      font-size: 24px;
+      line-height: 37px;
+      color: #ffffff;
+      font-weight: 300;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .email-input,
+    .sign-up-button {
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .email-input {
+      border: none;
+    }
+
+    .sign-up-button {
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 55px;
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}

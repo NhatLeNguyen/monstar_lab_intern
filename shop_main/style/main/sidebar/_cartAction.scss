@@ -1,0 +1,22 @@
+.cart-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .view-cart,
+  .checkout {
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 3px;
+  }
+  .view-cart {
+    border: none;
+    background-color: #00bcd4;
+    color: #ffffff;
+  }
+  .checkout {
+    background-color: rgba(0, 188, 212, 0);
+    border: 2px solid #46485c;
+  }
+}
