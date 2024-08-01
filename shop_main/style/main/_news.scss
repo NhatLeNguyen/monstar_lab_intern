@@ -98,3 +98,21 @@
     background-color: #b6c6c9;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .latest-news-section {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+
+  .blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .blog-post {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+}

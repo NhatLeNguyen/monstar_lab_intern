@@ -67,3 +67,12 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .recommended-product {
+    padding: 20px;
+    display: block;
+    .recommended-title {
+    }
+  }
+}

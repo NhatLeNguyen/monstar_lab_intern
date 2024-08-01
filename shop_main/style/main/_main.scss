@@ -17,10 +17,19 @@
     margin-top: 50px;
     .grid-container {
       grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
     .product-item {
       width: calc(100% - 20px);
       margin: 0 10px;
+    }
+  }
+
+  .brand-section {
+    .brand-section-content {
+      .brand-logo {
+        gap: 50px;
+      }
     }
   }
 }

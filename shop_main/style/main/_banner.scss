@@ -1,0 +1,37 @@
+.banner {
+  padding: 10px 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 224px;
+  background-color: #d1edac;
+  font-size: 42px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  color: #3c3950;
+
+  .banner-text {
+    display: flex;
+    align-items: center;
+    .fa-gem {
+      font-size: 80px;
+      margin-right: 10px;
+    }
+  }
+
+  .purchase-now {
+    background-color: #d1edac;
+    font-size: 19px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    font-weight: 700;
+    text-align: center;
+    border: 3px solid;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 0 20px;
+  }
+}

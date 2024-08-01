@@ -182,3 +182,41 @@ footer {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  footer {
+    height: max-content;
+    position: relative;
+    .footer {
+      padding: 20px;
+      flex-direction: column;
+      align-items: center;
+      .footer-col {
+        width: 100%;
+        .projects-section,
+        .flickr-feed-section {
+          display: none;
+        }
+
+        .newsletter-section {
+          margin-bottom: 100px;
+        }
+      }
+    }
+    .bottom-footer {
+      position: absolute;
+      .bottom-footer-content {
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        p {
+          margin: 0;
+        }
+      }
+      .bottom-action {
+        cursor: pointer;
+        display: flex;
+      }
+    }
+  }
+}
