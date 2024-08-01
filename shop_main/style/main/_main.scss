@@ -10,3 +10,17 @@
   display: flex;
   padding: 100px 350px;
 }
+@media screen and (max-width: 768px) {
+  .main-container {
+    padding: 0;
+    width: 100%;
+    margin-top: 50px;
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .product-item {
+      width: calc(100% - 20px);
+      margin: 0 10px;
+    }
+  }
+}

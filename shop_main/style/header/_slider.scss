@@ -67,3 +67,29 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .slider-container {
+    height: 300px;
+
+    .slide {
+      .slider-content {
+        padding: 10px 20px;
+        text-align: center;
+        .percent {
+          font-size: 60px;
+        }
+        .note {
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .prev,
+    .next {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+}
