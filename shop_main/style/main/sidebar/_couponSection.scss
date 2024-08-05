@@ -1,37 +1,27 @@
 .coupon-section {
   width: 100%;
-  display: flex;
+  @include flex-center;
   justify-content: center;
-  align-items: center;
   background-color: #ff5176;
   font-weight: 700;
   margin-top: 60px;
-
   .coupon-content {
     margin: 20px;
-    border: 6px solid #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
+    border: 6px solid $bg-white;
+    @include flex-center(column, 0);
+    color: $bg-white;
     .money-coupon {
-      font-size: 120px;
-      letter-spacing: 6px;
+      @include text-style(120px, 6px, $bg-white, 0);
     }
     .coupon-text {
-      font-size: 36px;
-      letter-spacing: 2px;
+      @include text-style(36px, 2px, $bg-white, 0);
     }
     .coupon-free {
-      color: #ffc107;
-      font-size: 36px;
-      letter-spacing: 2px;
+      @include text-style(36px, 2px, $star, 0);
     }
     .coupon-description {
-      font-size: 24px;
+      @include text-style(24px, 1px, $bg-white, 0);
       line-height: 37px;
-      color: #ffffff;
-      font-weight: 300;
       text-align: center;
       margin: 10px 0;
     }
@@ -45,13 +35,13 @@
     }
 
     .sign-up-button {
-      background-color: black;
-      color: white;
+      background-color: $bg-black;
+      color: $bg-white;
       border: none;
       cursor: pointer;
       padding: 10px 55px;
       &:hover {
-        background-color: #333;
+        background-color: $gray;
       }
     }
   }

@@ -1,31 +1,47 @@
 @import "_slider.scss";
+@import "../colors.scss";
+
 .menu-toggle {
   display: none;
   font-size: 24px;
   cursor: pointer;
 }
-.nav-links {
-  transition: max-height 0.3s ease-out;
-  max-height: 0;
 
+.nav-links-responsive {
+  display: none;
+  transition: transform 2s ease-out;
+  position: absolute;
+  top: 230px;
+  height: max-content;
+  width: 300px;
+  background-color: $bg-white;
+  overflow-y: auto;
+  z-index: 2;
   &.active {
-    max-height: 500px;
+    z-index: 1000;
+    display: block;
+    .nav-links-item {
+      .categories {
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-links-subitem,
+      .subcategory-list {
+        padding: 0;
+        list-style: none;
+      }
+      .category-item {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
 }
-.menu-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 998;
-}
+
 .top-bar {
   height: 50px;
-  box-shadow: inset 0px -1px 0px #dfe5e8;
-  background-color: #f4f6f7;
+  box-shadow: inset 0px -1px 0px $border-color;
+  background-color: $background-color;
   padding: 5px 350px;
   display: flex;
   justify-content: space-between;
@@ -43,7 +59,7 @@
       margin: 0 10px;
       font-size: 14px;
       font-weight: 400;
-      color: #5f727f;
+      color: $font-muted;
       &::before {
         content: "\f105";
         font-family: "FontAwesome";
@@ -53,12 +69,11 @@
   }
   .wishlist-btn {
     cursor: pointer;
-    width: 100px;
-    height: 30px;
+    @include size(100px, 30px);
     border-radius: 3px;
-    background-color: #494c64;
+    background-color: $dark-gray;
     font-size: 14px;
-    color: #ffffff;
+    color: $bg-white;
     font-weight: 400;
   }
 }
@@ -66,7 +81,7 @@
   padding: 10px 350px;
   height: 100px;
   filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.2));
-  background-color: #ffffff;
+  background-color: $bg-white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,7 +95,7 @@
     .shop-name {
       font-size: 27px;
       letter-spacing: 1px;
-      color: #3c3950;
+      color: $font-dark;
       font-weight: 700;
     }
   }
@@ -92,14 +107,12 @@
     li {
       margin: 0 10px;
       a {
-        text-decoration: none;
-        font-size: 14px;
         padding: 10px 20px;
-        color: #3c3950;
-        font-weight: 700;
+        text-decoration: none;
+        @include text-style(14px, 2px, $font-dark, 700);
         text-align: right;
         &:hover {
-          color: aqua;
+          color: $blue-color;
         }
       }
     }
@@ -117,12 +130,12 @@
         margin-right: 30px;
       }
       .quantity-in-cart {
-        font-size: 14px;
         text-align: center;
+        font-size: 14px;
         width: 20px;
         height: 17px;
-        background-color: #00bcd4;
-        color: #ffffff;
+        background-color: $blue-color;
+        color: $bg-white;
       }
       &::before {
         content: "";
@@ -131,7 +144,7 @@
         height: 0;
         margin: 0 28px;
         border-top: 8px solid transparent;
-        border-right: 17px solid #00bcd4;
+        border-right: 17px solid $blue-color;
         border-bottom: 9px solid transparent;
       }
     }
@@ -155,36 +168,37 @@
   }
 
   .main-nav {
-    flex-direction: column;
     height: auto;
     padding: 10px;
-    .logo-shop {
-      margin-bottom: 20px;
-    }
-
+    justify-content: space-between;
     .nav-links {
       flex-direction: column;
       width: 100%;
       display: none;
-      &.active {
-        display: flex;
-      }
-
-      li {
-        margin: 10px 0;
-
-        a {
-          display: block;
-          padding: 10px;
-          text-align: center;
-        }
-      }
     }
 
     .lan-search-cart {
-      width: 100%;
       justify-content: center;
-      margin-top: 20px;
+    }
+  }
+  .nav-links-responsive {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 20px;
+      border-top: 1px solid $border-color;
+      .nav-links-item {
+        text-decoration: none;
+        font-size: 14px;
+        color: $primary-color;
+        font-weight: 700;
+        @include text-style(14px, 1px, $primary-color, 700);
+        &:hover {
+          color: $blue-color;
+        }
+      }
     }
   }
 }

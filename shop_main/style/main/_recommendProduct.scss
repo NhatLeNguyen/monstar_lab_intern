@@ -5,35 +5,28 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   .recommended-title {
-    font-size: 19px;
-    letter-spacing: 1px;
+    @include text-style(19px, 1px, $font-dark, 700);
     line-height: 30px;
-    color: #3c3950;
-    font-weight: 700;
   }
   .product-list-item {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     margin: 20px 0;
     border: 1px solid #dfe5e8;
     position: relative;
-    background-color: #fff;
+    background-color: $bg-white;
     .p-l-i-image {
-      width: 80px;
-      height: 80px;
-      background-color: #99a9b5;
+      @include size(80px, 80px);
+      background-color: $bg-grey-light;
       margin-right: 10px;
       position: relative;
       .discount-label {
         position: absolute;
         top: 15px;
         left: 60px;
-        background-color: #00bcd4;
-        color: white;
-        border-radius: 50%;
+        @include text-style(12px, 0, $bg-white, 700);
+        @include border-radius;
+        background-color: $blue-color;
         padding: 5px 10px;
-        font-size: 12px;
-        font-weight: 700;
       }
     }
     .p-l-i-info {
@@ -43,9 +36,7 @@
       justify-content: space-between;
       p {
         margin: 5px;
-        font-size: 14px;
-        color: #5f727f;
-
+        @include text-style(14px, 0, $font-muted, 0);
         &:first-child {
           font-weight: 700;
         }
@@ -55,10 +46,10 @@
         margin-top: 30px;
       }
       .fa-star {
-        color: #a7a9aa;
+        color: $bg-grey-light;
       }
       .checked {
-        color: #ffc107;
+        color: $star;
       }
       .title-and-cost {
         display: flex;
@@ -72,7 +63,5 @@
   .recommended-product {
     padding: 20px;
     display: block;
-    .recommended-title {
-    }
   }
 }

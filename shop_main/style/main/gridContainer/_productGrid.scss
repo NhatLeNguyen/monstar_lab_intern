@@ -1,31 +1,24 @@
 .sort-product {
+  @include text-style(16px, 1px, $font-muted, 300);
+  @include flex-center;
   grid-column: span 3;
   height: 50px;
-  background-color: #f0f3f2;
-  letter-spacing: 1px;
-  color: #5f727f;
-  font-weight: 300;
-  display: flex;
+  background-color: $background-color;
   justify-content: space-between;
-  align-items: center;
   padding: 5px 10px;
 
   select {
     width: 100%;
     padding: 5px;
-    border: 1px solid #dfe5e8;
+    border: 1px solid $border-color;
     border-radius: 3px;
-    letter-spacing: 1px;
-    color: #5f727f;
-    font-weight: 300;
     cursor: pointer;
     &:hover {
-      border-color: #00bcd4;
+      border-color: $blue-color;
     }
   }
   .sort-filter {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     .desc-asc {
       margin: 0 10px;
       font-size: 14px;
@@ -34,8 +27,7 @@
     .switch {
       position: relative;
       display: inline-block;
-      width: 40px;
-      height: 24px;
+      @include size(40px, 24px);
       input {
         opacity: 0;
         width: 0;
@@ -67,27 +59,25 @@
         &:before {
           position: absolute;
           content: "";
-          height: 16px;
-          width: 16px;
+          @include size(16px, 16px);
           left: 4px;
           bottom: 4px;
-          background-color: white;
+          background-color: $bg-white;
           -webkit-transition: 0.4s;
           transition: 0.4s;
         }
       }
       .slider.round {
-        border-radius: 34px;
+        @include border-radius(34px);
         &::before {
-          border-radius: 50%;
+          @include border-radius;
         }
       }
     }
   }
 
   .show-result {
-    display: flex;
-    align-items: center;
+    @include flex-center;
     .show-result-text {
       white-space: nowrap;
       margin-right: 10px;
@@ -96,50 +86,40 @@
 }
 
 .product-item {
+  @include size(100%, 470px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: #f0f3f2;
-  width: 100%;
-  height: 470px;
+  background-color: $background-color;
   &:hover {
     cursor: pointer;
     background-color: #00bbd432;
     .product-details {
-      background-color: #f0f3f2;
+      background-color: $background-color;
     }
   }
   .product-details {
-    background-color: #ffffff;
-    border: 1px solid #dfe5e8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center(column, 0);
+    background-color: $bg-white;
+    border: 1px solid $border-color;
     padding: 20px 0;
     .product-title {
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      @include text-style(16px, 1px, $bg-black, 700);
     }
     .has-line {
       &::before {
         content: "";
+        @include size(50px, 2px);
         display: block;
-        width: 50px;
-        height: 2px;
-        background-color: #00bcd4;
+        background-color: $blue-color;
         margin: 10px auto;
       }
     }
     .product-price {
-      font-size: 16px;
-      color: #00bcd4;
-      font-weight: 400;
+      @include text-style(16px, 0, $blue-color, 400);
     }
     .product-actions {
-      font-size: 14px;
-      color: #555a72;
-      font-weight: 400;
+      @include text-style(14px, 0, #555a72, 400);
       .far,
       .fas {
         margin: 0 5px;
@@ -150,10 +130,10 @@
     }
     .fa-star {
       margin-bottom: 10px;
-      color: #a7a9aa;
+      color: $gray;
     }
     .checked {
-      color: #ffc107;
+      color: $star;
     }
   }
 }

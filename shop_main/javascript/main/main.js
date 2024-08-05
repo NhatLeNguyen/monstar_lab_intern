@@ -18,7 +18,7 @@ function toggleSubcategories(element) {
 
 // price filter
 document.addEventListener("DOMContentLoaded", function () {
-  var priceSlider = document.getElementById("price-slider");
+  let priceSlider = document.getElementById("price-slider");
 
   noUiSlider.create(priceSlider, {
     start: [345, 1640],
@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
     step: 100,
   });
 
-  var priceRange = document.getElementById("price-range");
+  let priceRange = document.getElementById("price-range");
 
-  priceSlider.noUiSlider.on("update", function (values, handle) {
+  priceSlider.noUiSlider.on("update", function (values) {
     priceRange.innerHTML =
       "Price: $" + Math.round(values[0]) + " — $" + Math.round(values[1]);
   });
@@ -46,12 +46,15 @@ document.querySelectorAll(".fa-heart").forEach(function (element) {
 });
 
 //handle page number active
+
+let activePage = document.querySelector(".page.active");
 document.querySelectorAll(".page").forEach(function (page) {
   page.addEventListener("click", function () {
-    document.querySelectorAll(".page").forEach(function (e) {
-      e.classList.remove("active");
-    });
+    if (activePage) {
+      activePage.classList.remove("active");
+    }
     this.classList.add("active");
+    activePage = this;
   });
 });
 

@@ -49,15 +49,14 @@
                 </div>
                 <div class="shop-name">THEGEM</div>
             </div>
-
             <ul class="nav-links">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PAGES</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">PORTFOLIOS</a></li>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">FEATURES</a></li>
-                <li><a href="#">ELEMENTS</a></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="">PAGES</a></li>
+                <li><a href="">BLOG</a></li>
+                <li><a href="">PORTFOLIOS</a></li>
+                <li><a href="">SHOP</a></li>
+                <li><a href="">FEATURES</a></li>
+                <li><a href="">ELEMENTS</a></li>
             </ul>
             <div class="lan-search-cart">
                 <i class="fas fa-globe"></i>
@@ -68,7 +67,72 @@
                 </div>
             </div>
         </nav>
-
+        <ul class="nav-links-responsive">
+            <li class="nav-links-item">
+                <div>HOME</div>
+            </li>
+            <li class="nav-links-item">
+                <div>PAGES</div>
+            </li>
+            <li class="nav-links-item">
+                <div>BLOG</div>
+            </li>
+            <li class="nav-links-item">
+                <div>PORTFOLIOS</div>
+            </li>
+            <li class="nav-links-item">
+                <div>SHOP</div>
+            </li>
+            <li class="nav-links-item">
+                <div>FEATURES</div>
+            </li>
+            <li class="nav-links-item">
+                <div>ELEMENTS</div>
+            </li>
+            <li class="nav-links-item">
+                <div class="categories" onclick="toggleSubcategories(this)">
+                    CATEGORIES <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="nav-links-subitem">
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            VERSION <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            LOREM IPSUM <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            PROIN <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="subcategory-list">
+                            <li>July 2015 <i class="fas fa-chevron-down"></i></li>
+                            <li>January 2013 <i class="fas fa-chevron-down"></i></li>
+                            <li>March 2012 <i class="fas fa-chevron-down"></i></li>
+                            <li>January 2012 <i class="fas fa-chevron-down"></i></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            GRAVIDA <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            NIBH VEL VELIT <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="category-item" onclick="toggleSubcategories(this)">
+                            AUCTOR <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
         <div class="slider-container">
             <div class="slide">
                 <div class="slider-content">
@@ -280,8 +344,11 @@
                             <p class="coupon-text">COUPON</p>
                             <p class="coupon-free">FOR FREE</p>
                             <p class="coupon-description">Just Signup For Our Newsletter And Get $5 To Your Account</p>
-                            <input class="email-input" type="email" placeholder="Enter Your Email..." />
-                            <button class="sign-up-button">SIGN UP ME!</button>
+                            <form action="">
+                                <input class="email-input" type="email" placeholder="Enter Your Email..." />
+                                <button class="sign-up-button">SIGN UP ME!</button>
+                            </form>
+
                         </div>
                     </div>
                     <div class="filter-section">
@@ -931,7 +998,6 @@
                         <p><i class="far fa-envelope"></i> &nbsp; Email: info@domain.tld</p>
                         <p><i class="fas fa-globe"></i>&nbsp;Website: www.codex-themes.com</p>
                     </div>
-
                 </div>
             </div>
             <!-- col 2 -->

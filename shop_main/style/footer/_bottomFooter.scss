@@ -1,19 +1,16 @@
 .bottom-footer {
-  width: 100%;
-  height: 100px;
+  @include size(100%, 100px);
   position: absolute;
   bottom: 0%;
   box-shadow: inset 0px 1px 0px rgba(57, 64, 80, 0.75);
-  background-color: #181828;
-  display: flex;
-  align-items: center;
-  color: #99a9b5;
-  .bottom-footer-content {
+  background-color: $bg-black;
+  @include flex-center(row, 0);
+  color: $button-border-color;
+  &-content {
     padding: 10px 350px;
     width: 100%;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
+    @include flex-center(row, 0);
   }
   .social-media {
     cursor: pointer;
@@ -25,7 +22,7 @@
     display: flex;
     p {
       padding: 0 20px;
-      border-right: 1px solid #394050;
+      border-right: 1px solid $bg-darker;
 
       &:last-child {
         border: none;

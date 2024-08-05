@@ -2,38 +2,33 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 14px;
-  font-weight: 700;
+  @include text-style(14px, 1px, $font-dark, 700);
   cursor: pointer;
   .category-item {
-    border: 1px solid #dfe5e8;
+    @include flex-center;
+    border: 1px solid $border-color;
     padding: 5px 20px;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    letter-spacing: 1px;
     line-height: 50px;
-    color: #3c3950;
-    font-weight: 700;
     &:hover {
-      color: #ff0000;
+      color: $active-color;
     }
     &.active {
-      color: #00bcd4;
+      color: $blue-color;
     }
   }
+
   .subcategory-list {
-    background-color: #f3f5f7;
+    background-color: $background-color;
     padding: 0;
     li {
       display: flex;
       justify-content: space-between;
       padding: 5px 20px;
-      border: 1px solid #dfe5e8;
+      border: 1px solid $border-color;
       padding: 20px 20px 20px 40px;
       &:hover {
-        color: #ff0000;
+        color: $active-color;
       }
     }
   }

@@ -1,10 +1,11 @@
+@import "../colors.scss";
 .slider-container {
   height: 400px;
-  display: flex;
+  @include flex-center(row, 0);
   position: relative;
   overflow: hidden;
   justify-content: center;
-  align-items: center;
+
   background: linear-gradient(
     90deg,
     rgba(217, 153, 199, 1) 0%,
@@ -24,13 +25,11 @@
     margin-top: -22px;
     padding: 16px;
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
+    @include text-style(18px, 1px, $bg-white, bold);
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    z-index: 1000;
+    z-index: 1;
     &:hover {
       cursor: pointer;
       background-color: #00bcd4;
@@ -49,13 +48,12 @@
     display: none;
     align-items: center;
     text-align: right;
-    color: #ffffff;
+    color: $bg-white;
+
     .slider-content {
       padding: 10px 350px;
       .percent {
-        font-size: 100px;
-        font-weight: 700;
-        letter-spacing: 5px;
+        @include text-style(100px, 5px, $bg-white, 700);
       }
 
       .note {

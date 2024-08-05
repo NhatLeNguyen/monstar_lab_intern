@@ -1,49 +1,41 @@
+@import "../colors.scss";
+
 .info-section {
-  display: flex;
-  gap: 50px;
+  @include flex-center(row, 50px);
   justify-content: space-between;
   padding: 100px 350px;
   .info-box {
     width: 50%;
-    border: 1px solid #dfe5e8;
+    @include flex-center(column, 0);
+    border: 1px solid $border-color;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     .title-icon {
       width: 80%;
       margin: 50px 70px 0 70px;
-      display: flex;
-      align-items: center;
+      @include flex-center;
+      @include text-style(24px, 1px, $font-dark, 700);
       justify-content: space-between;
-      font-size: 24px;
-      letter-spacing: 1px;
-      color: #3c3950;
-      font-weight: 700;
     }
 
     .info-content {
       margin: 20px 50px;
       flex: 1;
       .info-box-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #333;
+        @include text-style(20px, 1px, $font-dark, 700);
         margin-bottom: 10px;
       }
       p {
-        font-size: 14px;
-        color: #5f727f;
+        @include text-style(14px, 0px, $font-muted, 0);
         margin: 20px 20px;
       }
       .payment-icons {
         display: flex;
         flex-wrap: wrap;
         .payment-icon {
-          width: 50px;
-          height: 32px;
-          background-color: #dfe5e8;
+          @include size(50px, 32px);
+          background-color: $border-color;
           margin: 20px;
         }
       }
@@ -56,15 +48,12 @@
       padding: 0;
       li {
         margin-left: 20px;
-        font-size: 16px;
+        @include flex-center;
+        @include text-style(16px, 0, $font-muted, 400);
         padding: 10px 0;
-        color: #5f727f;
-        font-weight: 400;
-        display: flex;
-        align-items: center;
         .icon-check {
           margin-right: 10px;
-          color: #00bcd4;
+          color: $blue-color;
         }
       }
     }

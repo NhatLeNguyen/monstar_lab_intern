@@ -3,18 +3,47 @@ $primary-color: #3c3950;
 $blue-color: #00bcd4;
 $active-color: #ff0000;
 $background-color: #f4f6f7;
-
 $light-gray: #f9f9f9;
 $gray: #666;
 $dark-gray: #494c64;
-$border-color: #dfe5e8;
-
+$bg-grey-light: #b6c6c9;
+$bg-darker: #394050;
+$bg-black: #181828;
+$bg-green-light: #d1edac;
+$star: #ffc107;
 // Font colors
 $font-dark: #3c3950;
-$font-light: #ffffff;
 $font-muted: #5f727f;
+$bg-white: #ffffff;
+
+//border colors
+$border-color: #dfe5e8;
 
 // Button colors
-$button-bg-color: rgba(182, 198, 201, 0);
+$button-bg-color: #b6c6c9;
 $button-hover-bg-color: #3c3950;
 $button-border-color: #99a9b5;
+
+//mixin
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin border-radius($radius: 50%) {
+  border-radius: $radius;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text-style($font-size, $letter-spacing, $color, $font-weight) {
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  color: $color;
+  font-weight: $font-weight;
+}

@@ -1,18 +1,13 @@
 .subtotal {
-  display: flex;
+  @include flex-center;
   justify-content: space-between;
-  align-items: center;
   margin-top: 30px;
   .subtotal-title {
-    font-size: 16px;
+    @include text-style(16px, 0, $font-muted, 400);
     line-height: 25px;
-    color: #5f727f;
-    font-weight: 400;
   }
   .subtotal-price {
-    font-size: 24px;
+    @include text-style(24px, 0, $font-muted, 300);
     line-height: 37px;
-    color: #3c3950;
-    font-weight: 300;
   }
 }

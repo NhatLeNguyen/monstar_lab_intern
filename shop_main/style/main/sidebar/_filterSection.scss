@@ -2,12 +2,10 @@
   margin-top: 60px;
 
   p {
-    font-size: 16px;
-    font-weight: 700;
+    @include flex-center;
+    @include text-style(16px, 0, $bg-black, 700);
     cursor: pointer;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
 
     .fa-chevron-down,
     .fa-chevron-up {
@@ -16,36 +14,28 @@
   }
 
   .price-filter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center(column, 0);
 
     .button-priceRange {
       display: flex;
       justify-content: space-between;
       width: 100%;
       .filter-button {
-        background-color: #ffffff;
+        background-color: $bg-white;
         padding: 5px 10px;
         border-radius: 3px;
-        border: 2px solid #00bcd4;
+        border: 2px solid $blue-color;
+        @include text-style(14px, 1px, $blue-color, 700);
 
-        font-size: 14px;
-        letter-spacing: 1px;
-        color: #00bcd4;
-        font-weight: 700;
         &:hover {
           cursor: pointer;
-          background-color: #00bcd4;
-          color: #fff;
+          background-color: $blue-color;
+          color: $bg-white;
         }
       }
       #price-range {
-        display: flex;
-        align-items: center;
-        font-size: 16px;
-        color: #99a9b5;
-        font-weight: 400;
+        @include flex-center;
+        @include text-style(16px, 0, #99a9b5, 400);
         white-space: nowrap;
       }
     }
@@ -58,25 +48,23 @@
   select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #dfe5e8;
+    border: 1px solid $border-color;
     cursor: pointer;
 
     &:hover {
-      border-color: #00bcd4;
+      border-color: $blue-color;
     }
   }
 
   .recently-viewed {
-    background-color: #f0f3f2;
+    background-color: $background-color;
     .recent-item {
-      display: flex;
-      align-items: center;
+      @include flex-center;
       padding: 20px 10px;
-      border: 1px solid #dfe5e8;
+      border: 1px solid $border-color;
       .item-image {
-        width: 60px;
-        height: 60px;
-        background-color: #99a9b5;
+        @include size(60px, 60px);
+        background-color: $bg-grey-light;
         margin-right: 10px;
         border-radius: 50%;
       }
@@ -99,10 +87,10 @@
       }
       .fa-star {
         margin-bottom: 10px;
-        color: #a7a9aa;
+        color: $bg-grey-light;
       }
       .checked {
-        color: #ffc107;
+        color: $star;
       }
     }
   }
@@ -113,7 +101,7 @@
     cursor: pointer;
     .tag {
       background-color: rgba(153, 169, 181, 0);
-      border: 1px solid #99a9b5;
+      border: 1px solid $border-color;
       margin: 5px;
       padding: 5px;
     }
@@ -121,27 +109,24 @@
   .featured-product {
     margin-top: 20px;
     .f-p-item {
-      display: flex;
-      align-items: center;
+      @include flex-center;
       margin: 20px 0;
-      border: 1px solid #dfe5e8;
+      border: 1px solid $border-color;
       position: relative;
       .f-p-i-image {
-        width: 80px;
-        height: 80px;
-        background-color: #c5c5c5;
+        @include size(80px, 80px);
+        background-color: $bg-grey-light;
         margin-right: 10px;
         position: relative;
         .discount-label {
           position: absolute;
+          @include border-radius;
+          @include text-style(12px, 0, $bg-white, 700);
           top: 15px;
           left: 60px;
-          background-color: #00bcd4;
-          color: white;
-          border-radius: 50%;
+          background-color: $blue-color;
+
           padding: 5px 10px;
-          font-size: 12px;
-          font-weight: 700;
         }
       }
       .f-p-i-info {

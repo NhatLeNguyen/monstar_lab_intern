@@ -12,16 +12,12 @@
 }
 @media screen and (max-width: 768px) {
   .main-container {
-    padding: 0;
-    width: 100%;
+    padding: 10px;
+    width: 97%;
     margin-top: 50px;
-    .grid-container {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
     .product-item {
-      width: calc(100% - 20px);
-      margin: 0 10px;
+      width: 100%;
+      margin: 0;
     }
   }
 

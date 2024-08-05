@@ -1,14 +1,13 @@
 @import "./bottomFooter";
+@import "../colors.scss";
 footer {
-  width: 100%;
-  height: 1000px;
+  @include size(100%, 1000px);
   background-color: #212331;
   position: relative;
   .footer {
     padding: 0 350px;
-    display: flex;
-    gap: 20px;
-    color: #99a9b5;
+    @include flex-center(row, 20px);
+    color: $button-border-color;
     .footer-section {
       padding: 10px;
       margin-top: 40px;
@@ -17,20 +16,16 @@ footer {
       p {
         margin: 0;
         padding: 10px 0;
-        font-size: 16px;
+        @include text-style(16px, 0, $button-border-color, 400);
         line-height: 25px;
-        font-weight: 400;
       }
       .footer-title {
-        font-size: 18px;
-        font-weight: bold;
+        @include text-style(18px, 0, $bg-white, bold);
         margin-bottom: 15px;
         position: relative;
-        color: #fff;
       }
       .address {
-        display: flex;
-        align-items: center;
+        @include flex-center(row, 5px);
         .fa-map-marker-alt {
           margin-right: 5px;
         }
@@ -44,25 +39,20 @@ footer {
       width: 25%;
       .logo-section {
         .footer-logo {
-          display: flex;
-          align-items: center;
+          @include flex-center(row, 10px);
           .shop-name {
-            font-size: 39px;
-            letter-spacing: 2px;
+            @include text-style(39px, 2px, $bg-white, 300);
             line-height: 36px;
-            font-weight: 300;
           }
+
           .fa-gem {
-            color: #00bcd4;
-            font-size: 50px;
+            @include text-style(50px, 2px, $blue-color, 0);
             margin-right: 10px;
           }
         }
         p {
-          font-size: 16px;
+          @include text-style(16px, 0px, $button-border-color, 400);
           line-height: 25px;
-          color: #99a9b5;
-          font-weight: 400;
         }
       }
 
@@ -71,9 +61,7 @@ footer {
           padding: 0;
           list-style: none;
           li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            @include flex-center(row, 10px);
             border-bottom: 1px dashed;
             &:last-child {
               border-bottom: none;
@@ -84,10 +72,10 @@ footer {
             }
           }
           .post-img {
-            width: 140px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: #99a9b5;
+            @include size(70px, 70px);
+            @include border-radius;
+            background-color: $button-border-color;
+            padding-right: 40px;
           }
         }
       }
@@ -112,14 +100,14 @@ footer {
           textarea,
           button {
             width: 100%;
-            border-radius: 3px;
-            background-color: #181828;
-            border: 1px solid #394050;
+            @include border-radius(3px);
+            background-color: $bg-black;
+            border: 1px solid $bg-darker;
             margin: 10px 0;
             padding: 10px 0 10px 10px;
           }
           button {
-            background-color: #394050;
+            background-color: $bg-darker;
           }
         }
       }
@@ -134,20 +122,17 @@ footer {
           margin-top: 50px;
           .project-img,
           .flickr-img {
-            width: 80px;
-            height: 80px;
-            background-color: #5c6973;
+            @include size(80px, 80px);
+            background-color: $dark-gray;
           }
         }
         .dots {
-          display: flex;
-          align-content: center;
+          @include flex-center(row, 0);
           justify-content: center;
           .dot {
-            width: 13px;
-            height: 13px;
+            @include size(13px, 13px);
             border-radius: 50%;
-            background-color: #394050;
+            background-color: $bg-darker;
             margin: 20px 5px;
           }
         }
@@ -157,9 +142,8 @@ footer {
         input {
           width: 100%;
           border-radius: 3px;
-          background-color: #181828;
-          border: 1px solid #394050;
-
+          background-color: $bg-black;
+          border: 1px solid $bg-darker;
           padding: 10px 0 10px 10px;
         }
         .submit-email {
@@ -167,21 +151,20 @@ footer {
           display: flex;
           button {
             cursor: pointer;
-            width: 40px;
-            height: 40px;
-            border-radius: 3px;
-            background-color: #394050;
+            @include size(40px, 40px);
+            @include border-radius(3px);
+            background-color: $bg-darker;
           }
         }
         .note {
-          font-size: 14px;
+          @include text-style(14px, 0, $button-border-color, 400);
           line-height: 22px;
-          font-weight: 400;
         }
       }
     }
   }
 }
+
 @media screen and (max-width: 768px) {
   footer {
     height: max-content;
@@ -190,11 +173,20 @@ footer {
       padding: 20px;
       flex-direction: column;
       align-items: center;
+
       .footer-col {
         width: 100%;
+
         .projects-section,
         .flickr-feed-section {
           display: none;
+        }
+
+        .recent-posts-section {
+          .post-img {
+            padding: 20px;
+            margin: 10px 0;
+          }
         }
 
         .newsletter-section {
@@ -206,9 +198,8 @@ footer {
       position: absolute;
       .bottom-footer-content {
         padding: 20px;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        @include flex-center(column, 10px);
+
         p {
           margin: 0;
         }
