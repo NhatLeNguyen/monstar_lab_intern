@@ -1,14 +1,5 @@
 // handle responsive main nav
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const menuToggle = document.querySelector(".menu-toggle");
-//   const navLinksResponsive = document.querySelector(".nav-links-responsive");
-
-//   menuToggle.addEventListener("click", function () {
-//     navLinksResponsive.classList.toggle("active");
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.querySelector(".menu-toggle");
   const navLinksResponsive = document.querySelector(".nav-links-responsive");

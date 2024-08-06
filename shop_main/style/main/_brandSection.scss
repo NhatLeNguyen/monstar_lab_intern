@@ -1,8 +1,7 @@
 .brand-section {
-  @include size(100%, 435px);
   @include flex-center(column, 0);
+  padding: 50px;
   background-color: #f0f3f2;
-  margin-top: 100px;
   position: relative;
   justify-content: center;
 
@@ -31,6 +30,7 @@
     background-size: 30px 60px;
     transform: rotateX(180deg);
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -65,26 +65,32 @@
       @include text-style(28px, 1px, $font-dark, 300px);
       line-height: 54px;
     }
+
     .brand-logo {
       @include flex-center(row, 130px);
+
       .brand-circle {
         @include size(80px, 80px);
         @include border-radius;
         background-color: $bg-grey-light;
+
         &:hover {
           cursor: pointer;
           background-color: $gray;
         }
       }
     }
+
     .dots {
       @include flex-center(row, 20px);
+
       .dot {
         cursor: pointer;
         @include size(16px, 16px);
         @include border-radius;
         background-color: $font-muted;
       }
+
       .active {
         @include size(10px, 10px);
         background-color: $bg-white;

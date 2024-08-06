@@ -107,6 +107,7 @@
       @include text-style(16px, 1px, $bg-black, 700);
     }
     .has-line {
+      text-align: center;
       &::before {
         content: "";
         @include size(50px, 2px);

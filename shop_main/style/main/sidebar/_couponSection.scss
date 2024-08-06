@@ -5,31 +5,38 @@
   background-color: #ff5176;
   font-weight: 700;
   margin-top: 60px;
+
   .coupon-content {
     margin: 20px;
     border: 6px solid $bg-white;
     @include flex-center(column, 0);
     color: $bg-white;
+
     .money-coupon {
       @include text-style(120px, 6px, $bg-white, 0);
     }
+
     .coupon-text {
       @include text-style(36px, 2px, $bg-white, 0);
     }
+
     .coupon-free {
       @include text-style(36px, 2px, $star, 0);
     }
+
     .coupon-description {
       @include text-style(24px, 1px, $bg-white, 0);
       line-height: 37px;
       text-align: center;
       margin: 10px 0;
     }
+
     .email-input,
     .sign-up-button {
       padding: 10px;
       margin: 10px 0;
     }
+
     .email-input {
       border: none;
     }
@@ -40,6 +47,7 @@
       border: none;
       cursor: pointer;
       padding: 10px 55px;
+
       &:hover {
         background-color: $gray;
       }

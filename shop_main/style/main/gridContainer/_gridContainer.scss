@@ -66,7 +66,7 @@
       margin: 0 10px;
 
       &:hover {
-        background-color: $button-hover-bg-color;
+        background-color: currentColor;
       }
     }
   }
@@ -76,6 +76,7 @@
     @include flex-center(row, 20px);
     justify-content: center;
     cursor: pointer;
+
     .page,
     .fas {
       @include flex-center;
@@ -84,15 +85,18 @@
       justify-content: center;
       background-color: rgba(60, 57, 80, 0);
       border: 1px solid $button-border-color;
+
       &:hover {
         background-color: $blue-color;
         color: $bg-white;
       }
+
       &.active {
         background-color: $button-hover-bg-color;
         color: $bg-white;
       }
     }
+
     .fas {
       background-color: $button-bg-color;
       color: $bg-white;

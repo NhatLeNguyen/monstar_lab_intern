@@ -79,12 +79,10 @@
 }
 .main-nav {
   padding: 10px 350px;
-  height: 100px;
   filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.2));
   background-color: $bg-white;
-  display: flex;
+  @include flex-center;
   justify-content: space-between;
-  align-items: center;
   .logo-shop {
     display: flex;
     align-items: center;

@@ -20,6 +20,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+
       .filter-button {
         background-color: $bg-white;
         padding: 5px 10px;
@@ -33,12 +34,14 @@
           color: $bg-white;
         }
       }
+
       #price-range {
         @include flex-center;
         @include text-style(16px, 0, #99a9b5, 400);
         white-space: nowrap;
       }
     }
+
     #price-slider {
       width: 100%;
       margin: 10px 0;
@@ -58,10 +61,12 @@
 
   .recently-viewed {
     background-color: $background-color;
+
     .recent-item {
       @include flex-center;
       padding: 20px 10px;
       border: 1px solid $border-color;
+
       .item-image {
         @include size(60px, 60px);
         background-color: $bg-grey-light;
@@ -85,10 +90,12 @@
           }
         }
       }
+
       .fa-star {
         margin-bottom: 10px;
         color: $bg-grey-light;
       }
+
       .checked {
         color: $star;
       }
@@ -99,6 +106,7 @@
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
+
     .tag {
       background-color: rgba(153, 169, 181, 0);
       border: 1px solid $border-color;
@@ -106,18 +114,22 @@
       padding: 5px;
     }
   }
+
   .featured-product {
     margin-top: 20px;
-    .f-p-item {
+
+    .product {
       @include flex-center;
       margin: 20px 0;
       border: 1px solid $border-color;
       position: relative;
-      .f-p-i-image {
+
+      .product-image {
         @include size(80px, 80px);
         background-color: $bg-grey-light;
         margin-right: 10px;
         position: relative;
+
         .discount-label {
           position: absolute;
           @include border-radius;
@@ -125,15 +137,16 @@
           top: 15px;
           left: 60px;
           background-color: $blue-color;
-
           padding: 5px 10px;
         }
       }
-      .f-p-i-info {
+
+      .product-info {
         padding: 0 10px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
         p {
           margin: 5px;
           font-size: 14px;

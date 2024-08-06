@@ -4,21 +4,25 @@
   gap: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   .recommended-title {
     @include text-style(19px, 1px, $font-dark, 700);
     line-height: 30px;
   }
+
   .product-list-item {
     @include flex-center;
     margin: 20px 0;
     border: 1px solid #dfe5e8;
     position: relative;
     background-color: $bg-white;
-    .p-l-i-image {
+
+    .product-image {
       @include size(80px, 80px);
       background-color: $bg-grey-light;
       margin-right: 10px;
       position: relative;
+
       .discount-label {
         position: absolute;
         top: 15px;
@@ -29,28 +33,35 @@
         padding: 5px 10px;
       }
     }
-    .p-l-i-info {
+
+    .product-info {
       padding: 0 10px;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+
       p {
         margin: 5px;
         @include text-style(14px, 0, $font-muted, 0);
+
         &:first-child {
           font-weight: 700;
         }
       }
+
       .fa {
         font-size: 14px;
         margin-top: 30px;
       }
+
       .fa-star {
         color: $bg-grey-light;
       }
+
       .checked {
         color: $star;
       }
+
       .title-and-cost {
         display: flex;
         flex-direction: column;

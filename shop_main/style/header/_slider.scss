@@ -1,4 +1,6 @@
 @import "../colors.scss";
+@import "../mixin";
+
 .slider-container {
   height: 400px;
   @include flex-center(row, 0);
@@ -16,6 +18,7 @@
     rgba(163, 134, 178, 1) 78%,
     rgba(126, 154, 180, 1) 100%
   );
+
   .prev,
   .next {
     cursor: pointer;
@@ -35,14 +38,17 @@
       background-color: #00bcd4;
     }
   }
+
   .prev {
     left: 0;
     border-radius: 3px 0 0 3px;
   }
+
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
+
   .slide {
     min-width: 100%;
     display: none;
@@ -84,6 +90,7 @@
         }
       }
     }
+
     .prev,
     .next {
       padding: 8px;

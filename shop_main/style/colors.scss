@@ -1,4 +1,4 @@
-// Primary colors
+// Primary Colors
 $primary-color: #3c3950;
 $blue-color: #00bcd4;
 $active-color: #ff0000;
@@ -11,39 +11,16 @@ $bg-darker: #394050;
 $bg-black: #181828;
 $bg-green-light: #d1edac;
 $star: #ffc107;
-// Font colors
+
+// Font Colors
 $font-dark: #3c3950;
 $font-muted: #5f727f;
 $bg-white: #ffffff;
 
-//border colors
+// Border Colors
 $border-color: #dfe5e8;
 
-// Button colors
+// Button Colors
 $button-bg-color: #b6c6c9;
 $button-hover-bg-color: #3c3950;
 $button-border-color: #99a9b5;
-
-//mixin
-
-@mixin flex-center($direction: row, $gap: 0) {
-  display: flex;
-  flex-direction: $direction;
-  align-items: center;
-  gap: $gap;
-}
-
-@mixin border-radius($radius: 50%) {
-  border-radius: $radius;
-}
-@mixin size($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin text-style($font-size, $letter-spacing, $color, $font-weight) {
-  font-size: $font-size;
-  letter-spacing: $letter-spacing;
-  color: $color;
-  font-weight: $font-weight;
-}
