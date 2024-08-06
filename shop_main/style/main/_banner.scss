@@ -1,0 +1,33 @@
+@import "../colors.scss";
+
+.banner {
+  padding: 10px 350px;
+  @include size(auto, 224px);
+  @include flex-center(row, 0);
+  @include text-style(42px, 2px, $button-hover-bg-color, 0);
+  justify-content: space-between;
+  background-color: $bg-green-light;
+  line-height: 50px;
+
+  .banner-text {
+    @include flex-center(row, 0);
+    .fa-gem {
+      font-size: 80px;
+      margin-right: 10px;
+    }
+  }
+
+  .purchase-now {
+    background-color: $bg-green-light;
+    @include text-style(19px, 1px, $button-hover-bg-color, 700);
+    padding: 10px 20px;
+    text-align: center;
+    border: 3px solid;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner {
+    padding: 0 20px;
+  }
+}

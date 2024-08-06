@@ -1,0 +1,202 @@
+@import "_slider.scss";
+@import "../colors.scss";
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links-responsive {
+  display: none;
+  transition: transform 2s ease-out;
+  position: absolute;
+  top: 230px;
+  height: max-content;
+  width: 300px;
+  background-color: $bg-white;
+  overflow-y: auto;
+  z-index: 2;
+  &.active {
+    z-index: 1000;
+    display: block;
+    .nav-links-item {
+      .categories {
+        display: flex;
+        justify-content: space-between;
+      }
+      .nav-links-subitem,
+      .subcategory-list {
+        padding: 0;
+        list-style: none;
+      }
+      .category-item {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.top-bar {
+  height: 50px;
+  box-shadow: inset 0px -1px 0px $border-color;
+  background-color: $background-color;
+  padding: 5px 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .social-icons {
+    cursor: pointer;
+    i {
+      margin: 0 5px;
+    }
+  }
+
+  .user-actions {
+    a {
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+      font-weight: 400;
+      color: $font-muted;
+      &::before {
+        content: "\f105";
+        font-family: "FontAwesome";
+        margin: 0 5px;
+      }
+    }
+  }
+  .wishlist-btn {
+    cursor: pointer;
+    @include size(100px, 30px);
+    border-radius: 3px;
+    background-color: $dark-gray;
+    font-size: 14px;
+    color: $bg-white;
+    font-weight: 400;
+  }
+}
+.main-nav {
+  padding: 10px 350px;
+  filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.2));
+  background-color: $bg-white;
+  @include flex-center;
+  justify-content: space-between;
+  .logo-shop {
+    display: flex;
+    align-items: center;
+    .logo {
+      font-size: 40px;
+      margin-right: 10px;
+    }
+    .shop-name {
+      font-size: 27px;
+      letter-spacing: 1px;
+      color: $font-dark;
+      font-weight: 700;
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0 10px;
+      a {
+        padding: 10px 20px;
+        text-decoration: none;
+        @include text-style(14px, 2px, $font-dark, 700);
+        text-align: right;
+        &:hover {
+          color: $blue-color;
+        }
+      }
+    }
+  }
+  .lan-search-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    .cart {
+      display: flex;
+      align-items: center;
+      position: relative;
+      .fa-shopping-bag {
+        margin-right: 30px;
+      }
+      .quantity-in-cart {
+        text-align: center;
+        font-size: 14px;
+        width: 20px;
+        height: 17px;
+        background-color: $blue-color;
+        color: $bg-white;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin: 0 28px;
+        border-top: 8px solid transparent;
+        border-right: 17px solid $blue-color;
+        border-bottom: 9px solid transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    .social-icons,
+    .user-actions,
+    .wishlist-btn {
+      margin: 10px 0;
+    }
+  }
+
+  .main-nav {
+    height: auto;
+    padding: 10px;
+    justify-content: space-between;
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+    }
+
+    .lan-search-cart {
+      justify-content: center;
+    }
+  }
+  .nav-links-responsive {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 20px;
+      border-top: 1px solid $border-color;
+      .nav-links-item {
+        text-decoration: none;
+        font-size: 14px;
+        color: $primary-color;
+        font-weight: 700;
+        @include text-style(14px, 1px, $primary-color, 700);
+        &:hover {
+          color: $blue-color;
+        }
+      }
+    }
+  }
+}

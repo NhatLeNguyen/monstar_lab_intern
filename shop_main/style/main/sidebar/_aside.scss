@@ -1,0 +1,25 @@
+@import "./categoryList";
+@import "./search";
+@import "./filterSection";
+@import "./couponSection";
+@import "./subtotal";
+@import "./cartAction";
+
+.sidebar {
+  width: 25%;
+  padding-right: 50px;
+  color: $font-dark;
+
+  p {
+    margin: 0 0 20px;
+    letter-spacing: 1px;
+    font-size: 19px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

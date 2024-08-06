@@ -1,0 +1,32 @@
+@import "../colors.scss";
+@import "./sidebar/aside";
+@import "./gridContainer/gridContainer";
+@import "./brandSection";
+@import "./recommendProduct";
+@import "./infoSection";
+@import "./news";
+
+.main-container {
+  display: flex;
+  padding: 100px 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+    margin-top: 50px;
+
+    .product-item {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .brand-section {
+    .brand-section-content {
+      .brand-logo {
+        gap: 50px;
+      }
+    }
+  }
+}

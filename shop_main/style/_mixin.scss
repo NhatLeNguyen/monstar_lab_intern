@@ -1,0 +1,23 @@
+//mixin
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin border-radius($radius: 50%) {
+  border-radius: $radius;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text-style($font-size, $letter-spacing, $color, $font-weight) {
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  color: $color;
+  font-weight: $font-weight;
+}

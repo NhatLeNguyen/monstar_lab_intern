@@ -1,0 +1,20 @@
+.search {
+  margin-top: 60px;
+  position: relative;
+  @include flex-center;
+
+  .search-input {
+    @include size(100%, 40px);
+    padding: 0 10px;
+    border-radius: 3px;
+    background-color: $bg-white;
+    border: 2px solid $border-color;
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    color: $bg-grey-light;
+  }
+}

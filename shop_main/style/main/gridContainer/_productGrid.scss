@@ -1,0 +1,140 @@
+.sort-product {
+  @include text-style(16px, 1px, $font-muted, 300);
+  @include flex-center;
+  grid-column: span 3;
+  height: 50px;
+  background-color: $background-color;
+  justify-content: space-between;
+  padding: 5px 10px;
+
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+      border-color: $blue-color;
+    }
+  }
+  .sort-filter {
+    @include flex-center;
+    .desc-asc {
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      @include size(40px, 24px);
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked + .slider {
+          background-color: #2196f3;
+        }
+
+        &:focus + .slider {
+          box-shadow: 0 0 1px #2196f3;
+        }
+
+        &:checked + .slider:before {
+          -webkit-transform: translateX(16px);
+          -ms-transform: translateX(16px);
+          transform: translateX(16px);
+        }
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        &:before {
+          position: absolute;
+          content: "";
+          @include size(16px, 16px);
+          left: 4px;
+          bottom: 4px;
+          background-color: $bg-white;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+      }
+      .slider.round {
+        @include border-radius(34px);
+        &::before {
+          @include border-radius;
+        }
+      }
+    }
+  }
+
+  .show-result {
+    @include flex-center;
+    .show-result-text {
+      white-space: nowrap;
+      margin-right: 10px;
+    }
+  }
+}
+
+.product-item {
+  @include size(100%, 470px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: $background-color;
+  &:hover {
+    cursor: pointer;
+    background-color: #00bbd432;
+    .product-details {
+      background-color: $background-color;
+    }
+  }
+  .product-details {
+    @include flex-center(column, 0);
+    background-color: $bg-white;
+    border: 1px solid $border-color;
+    padding: 20px 0;
+    .product-title {
+      @include text-style(16px, 1px, $bg-black, 700);
+    }
+    .has-line {
+      text-align: center;
+      &::before {
+        content: "";
+        @include size(50px, 2px);
+        display: block;
+        background-color: $blue-color;
+        margin: 10px auto;
+      }
+    }
+    .product-price {
+      @include text-style(16px, 0, $blue-color, 400);
+    }
+    .product-actions {
+      @include text-style(14px, 0, #555a72, 400);
+      .far,
+      .fas {
+        margin: 0 5px;
+      }
+    }
+    .red {
+      color: red;
+    }
+    .fa-star {
+      margin-bottom: 10px;
+      color: $gray;
+    }
+    .checked {
+      color: $star;
+    }
+  }
+}

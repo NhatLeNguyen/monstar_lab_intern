@@ -1,0 +1,120 @@
+@import "../colors.scss";
+
+.latest-news-section {
+  text-align: center;
+  padding: 100px 350px 0 350px;
+
+  .latest-news-title {
+    @include text-style(36px, 2px, $font-dark, 300);
+    line-height: 54px;
+    margin-bottom: 20px;
+  }
+
+  .blog-posts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .blog-post {
+      background-color: $light-gray;
+      margin-bottom: 20px;
+      border: 1px solid #dfe5e8;
+
+      .blog-post-image {
+        @include size(100%, 188px);
+        background-color: $border-color;
+      }
+
+      .blog-post-content {
+        padding: 15px;
+        text-align: left;
+
+        p {
+          @include text-style(16px, 0, $font-muted, 700);
+          margin-bottom: 50px;
+          line-height: 25px;
+        }
+
+        .blog-content-title {
+          @include text-style(24px, 0, $font-dark, 0);
+          margin: 50px 0;
+          font-size: 24px;
+        }
+
+        .blog-post-meta {
+          display: flex;
+          justify-content: space-between;
+          @include text-style(12px, 0, $font-muted, 0);
+          margin-bottom: 10px;
+
+          .author {
+            @include text-style(14px, 0, $blue-color, 400);
+            text-decoration: none;
+          }
+
+          .blog-interact {
+            .comment,
+            .heart {
+              cursor: pointer;
+              font-size: 16px;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        .share-and-readMore {
+          @include flex-center(row, 0);
+
+          .read-more {
+            @include text-style(14px, 0, $blue-color, 700);
+            padding: 10px 20px;
+            border: none;
+            background-color: $background-color;
+            @include border-radius(3px);
+            border: 2px solid $blue-color;
+            display: block;
+            text-align: center;
+
+            &:hover {
+              cursor: pointer;
+              background-color: $blue-color;
+              color: $bg-white;
+            }
+          }
+
+          .fa-share-alt-square {
+            cursor: pointer;
+            margin-right: 20px;
+            font-size: 42px;
+            @include border-radius(3px);
+            color: $button-border-color;
+          }
+        }
+      }
+    }
+  }
+
+  .line {
+    margin-top: 100px;
+    height: 1px;
+    background-color: $bg-grey-light;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .latest-news-section {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+
+  .blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .blog-post {
+    flex-basis: calc(48%);
+    margin-bottom: 20px;
+  }
+}

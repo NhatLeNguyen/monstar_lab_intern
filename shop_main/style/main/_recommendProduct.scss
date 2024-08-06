@@ -1,0 +1,78 @@
+.recommended-product {
+  padding: 100px 350px;
+  background-color: #f0f3f2;
+  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .recommended-title {
+    @include text-style(19px, 1px, $font-dark, 700);
+    line-height: 30px;
+  }
+
+  .product-list-item {
+    @include flex-center;
+    margin: 20px 0;
+    border: 1px solid #dfe5e8;
+    position: relative;
+    background-color: $bg-white;
+
+    .product-image {
+      @include size(80px, 80px);
+      background-color: $bg-grey-light;
+      margin-right: 10px;
+      position: relative;
+
+      .discount-label {
+        position: absolute;
+        top: 15px;
+        left: 60px;
+        @include text-style(12px, 0, $bg-white, 700);
+        @include border-radius;
+        background-color: $blue-color;
+        padding: 5px 10px;
+      }
+    }
+
+    .product-info {
+      padding: 0 10px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      p {
+        margin: 5px;
+        @include text-style(14px, 0, $font-muted, 0);
+
+        &:first-child {
+          font-weight: 700;
+        }
+      }
+
+      .fa {
+        font-size: 14px;
+        margin-top: 30px;
+      }
+
+      .fa-star {
+        color: $bg-grey-light;
+      }
+
+      .checked {
+        color: $star;
+      }
+
+      .title-and-cost {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recommended-product {
+    padding: 20px;
+    display: block;
+  }
+}

@@ -1,0 +1,12 @@
+@import "nomalize.css";
+@import "./header//header";
+@import "./main/main";
+@import "./footer/footer";
+@import "../style/main/banner";
+
+body {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
