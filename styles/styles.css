@@ -1,0 +1,157 @@
+@import "./normalize.css";
+.login-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+.login-form .email,
+.login-form .password {
+  font-weight: 700;
+  margin-bottom: 25px;
+  width: 95%;
+}
+.login-form .email input[type=text],
+.login-form .password input[type=text] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-form .password-text {
+  display: flex;
+  justify-content: space-between;
+}
+.login-form .password-text .forgot-pass {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.login-form .signin-button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.login-form .signin-button:hover {
+  background-color: #979797;
+}
+.login-form .register-route {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+.login-form .register-route a {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.login-form .register-route a:hover {
+  text-decoration: underline;
+}
+.login-text {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.register-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 0 auto;
+}
+.register-form .name,
+.register-form .email,
+.register-form .password,
+.register-form .confirm-password,
+.register-form .agree-checkbox {
+  font-weight: 700;
+  margin-bottom: 25px;
+  width: 95%;
+}
+.register-form .name input[type=text],
+.register-form .name input[type=password],
+.register-form .email input[type=text],
+.register-form .email input[type=password],
+.register-form .password input[type=text],
+.register-form .password input[type=password],
+.register-form .confirm-password input[type=text],
+.register-form .confirm-password input[type=password],
+.register-form .agree-checkbox input[type=text],
+.register-form .agree-checkbox input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.register-form .name .error-message,
+.register-form .email .error-message,
+.register-form .password .error-message,
+.register-form .confirm-password .error-message,
+.register-form .agree-checkbox .error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.register-form .signup-button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.register-form .signup-button:hover {
+  background-color: #979797;
+}
+.register-form .login-route {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+.register-form .login-route a {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.register-form .login-route a:hover {
+  text-decoration: underline;
+}
+.register-text {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: "Montserrat";
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+/*# sourceMappingURL=styles.css.map */

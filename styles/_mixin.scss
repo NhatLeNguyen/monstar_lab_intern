@@ -1,0 +1,17 @@
+// mixin
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 10px, $color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin button-styles($bg-color, $hover-color) {
+  background-color: $bg-color;
+  color: $white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}

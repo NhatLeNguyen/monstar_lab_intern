@@ -1,0 +1,67 @@
+@import "../colors";
+@import "../mixin";
+
+.login {
+  &-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 50px;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    @include box-shadow;
+    background-color: $white;
+    margin: 0 auto;
+
+    .email,
+    .password {
+      font-weight: 700;
+      margin-bottom: 25px;
+      width: 95%;
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+      }
+    }
+    .password {
+      &-text {
+        display: flex;
+        justify-content: space-between;
+        .forgot-pass {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    .signin-button {
+      padding: 10px 20px;
+      width: 100%;
+      @include button-styles($black, $gray);
+    }
+    .register-route {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      text-align: center;
+      a {
+        cursor: pointer;
+        color: $blue;
+        text-decoration: none;
+        margin-left: 10px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &-text {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+}
