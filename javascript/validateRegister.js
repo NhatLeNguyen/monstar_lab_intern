@@ -18,14 +18,21 @@ const validations = [
     errorId: "passwordError",
     validate: (value) => {
       let errors = [];
-      if (!/(?=.*[A-Z])/.test(value))
+      if (!/(?=.*[A-Z])/.test(value)) {
         errors.push("at least one uppercase letter");
-      if (!/(?=.*[a-z])/.test(value))
+      }
+      if (!/(?=.*[a-z])/.test(value)) {
         errors.push("at least one lowercase letter");
-      if (!/(?=.*[0-9])/.test(value)) errors.push("at least one number");
-      if (!/(?=.*[^A-Za-z0-9])/.test(value))
+      }
+      if (!/(?=.*[0-9])/.test(value)) {
+        errors.push("at least one number");
+      }
+      if (!/(?=.*[^A-Za-z0-9])/.test(value)) {
         errors.push("at least one special symbol");
-      if (value.length < 8) errors.push("at least 8 characters long");
+      }
+      if (value.length < 8) {
+        errors.push("at least 8 characters long");
+      }
 
       return errors.length === 0 ? true : errors;
     },
