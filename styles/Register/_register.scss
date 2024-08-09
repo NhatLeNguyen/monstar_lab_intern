@@ -3,68 +3,38 @@
 
 .register {
   &-form {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding: 50px;
-    border: 1px solid $border-color;
-    border-radius: 10px;
+    @include form-style;
     @include box-shadow;
-    background-color: #fff;
-    margin: 0 auto;
 
     .name,
     .email,
     .password,
     .confirm-password,
     .agree-checkbox {
-      font-weight: 700;
-      margin-bottom: 25px;
-      width: 95%;
-
+      @include label;
       input[type="text"],
       input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid $border-color;
-        border-radius: 5px;
+        @include input-style;
       }
 
       .error-message {
-        color: $red;
-        font-size: 14px;
-        margin-top: 5px;
+        @include error-message;
       }
     }
 
     .signup-button {
-      padding: 10px 20px;
-      width: 100%;
-      @include button-styles($black, $gray);
+      @include button-styles;
     }
 
     .login-route {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-      text-align: center;
+      @include route-style;
       a {
-        cursor: pointer;
-        color: #007bff;
-        text-decoration: none;
-        margin-left: 10px;
-        &:hover {
-          text-decoration: underline;
-        }
+        @include a-tag-style;
       }
     }
   }
 
   &-text {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    @include text-style;
   }
 }

@@ -1,65 +1,87 @@
-function validateForm() {
-  document.getElementById("nameError").textContent = "";
-  document.getElementById("emailError").textContent = "";
-  document.getElementById("passwordError").textContent = "";
-  document.getElementById("confirmPasswordError").textContent = "";
-  document.getElementById("agreeError").textContent = "";
+const checkEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirmPassword").value;
-  const agree = document.getElementById("agree").checked;
+const validations = [
+  {
+    id: "name",
+    errorId: "nameError",
+    validate: (value) => value !== "",
+    errorMessage: "Please enter your name.",
+  },
+  {
+    id: "email",
+    errorId: "emailError",
+    validate: (value) => checkEmail.test(value),
+    errorMessage: "Please enter a valid email address.",
+  },
+  {
+    id: "password",
+    errorId: "passwordError",
+    validate: (value) => {
+      let errors = [];
+      if (!/(?=.*[A-Z])/.test(value))
+        errors.push("at least one uppercase letter");
+      if (!/(?=.*[a-z])/.test(value))
+        errors.push("at least one lowercase letter");
+      if (!/(?=.*[0-9])/.test(value)) errors.push("at least one number");
+      if (!/(?=.*[^A-Za-z0-9])/.test(value))
+        errors.push("at least one special symbol");
+      if (value.length < 8) errors.push("at least 8 characters long");
 
-  console.log(agree);
+      return errors.length === 0 ? true : errors;
+    },
+    errorMessage: "",
+  },
+  {
+    id: "confirmPassword",
+    errorId: "confirmPasswordError",
+    validate: (value) => {
+      const password = document.getElementById("password").value;
+      return value === password;
+    },
+    errorMessage: "Passwords do not match.",
+  },
+  {
+    id: "agree",
+    errorId: "agreeError",
+    validate: () => document.getElementById("agree").checked,
+    errorMessage: "Please agree to the above information.",
+  },
+];
 
-  const checkEmail =
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+function validateRegister() {
   let isValid = true;
 
-  if (name == "") {
-    document.getElementById("nameError").textContent =
-      "Please enter your name.";
-    isValid = false;
-  }
+  validations.forEach((validation) => {
+    const { id, errorId, validate, errorMessage } = validation;
+    const value =
+      id === "password"
+        ? document.getElementById(id).value
+        : document.getElementById(id).value;
 
-  if (!checkEmail.test(email)) {
-    document.getElementById("emailError").textContent =
-      "Please enter a valid email address.";
-    isValid = false;
-  }
+    let result = validate(value);
 
-  if (!validatePassword(password)) {
-    document.getElementById("passwordError").textContent =
-      "Must contain at least one number, one uppercase and lowercase letter, one digit, one special symbol and at least 8 or more characters";
-    isValid = false;
-  }
-
-  if (password !== confirmPassword) {
-    document.getElementById("confirmPasswordError").textContent =
-      "Passwords do not match.";
-    isValid = false;
-  }
-
-  if (!agree) {
-    document.getElementById("agreeError").textContent =
-      "Please agree to the above information.";
-    isValid = false;
-  }
+    if (Array.isArray(result)) {
+      const len = 5;
+      if (result.length == len) {
+        document.getElementById(
+          errorId
+        ).textContent = `Please enter a password.`;
+      } else {
+        document.getElementById(
+          errorId
+        ).textContent = `Password must contain ${result.join(", ")}`;
+      }
+      isValid = false;
+    } else if (!result) {
+      document.getElementById(errorId).textContent = errorMessage;
+      isValid = false;
+    } else {
+      document.getElementById(errorId).textContent = "";
+    }
+  });
 
   if (isValid) {
     alert("Create account successfully!");
   }
   return isValid;
-}
-
-function validatePassword(pw) {
-  return (
-    /[A-Z]/.test(pw) &&
-    /[a-z]/.test(pw) &&
-    /[0-9]/.test(pw) &&
-    /[^A-Za-z0-9]/.test(pw) &&
-    pw.length > 4
-  );
 }

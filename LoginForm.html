@@ -4,26 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoginForm</title>
+    <title>Login Form</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
 </head>
 
 <body>
     <main>
-        <form class="login-form" action="">
+        <form class="login-form" action="" id="registerForm" onsubmit="return validateLogin()">
             <div class="login-text">Login</div>
             <p>Enter your email and password to sign in to your account.</p>
             <div class="email">
-                <label for=""> Email</label>
-                <input type="text" placeholder="m@example.com">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="m@example">
+                <div class="error-message" id="emailError"></div>
             </div>
             <div class="password">
                 <div class="password-text">
                     <label for="">Password </label>
                     <div class="forgot-pass">Forgot Password?</div>
                 </div>
-                <input type="text">
+                <input type="password" id="password" placeholder="Enter a password">
+                <div class="error-message" id="passwordError"></div>
             </div>
             <button class="signin-button"> Sign in</button>
             <div class="register-route">
@@ -32,7 +34,7 @@
             </div>
         </form>
     </main>
-
+    <script src="./javascript/validateLogin.js"></script>
 </body>
 
 </html>

@@ -7,9 +7,9 @@
   padding: 50px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .login-form .email,
 .login-form .password {
@@ -18,12 +18,20 @@
   width: 95%;
 }
 .login-form .email input[type=text],
-.login-form .password input[type=text] {
+.login-form .email input[type=password],
+.login-form .password input[type=text],
+.login-form .password input[type=password] {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+.login-form .email .error-message,
+.login-form .password .error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
 }
 .login-form .password-text {
   display: flex;
@@ -74,9 +82,9 @@
   padding: 50px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .register-form .name,
 .register-form .email,
