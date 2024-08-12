@@ -19,6 +19,12 @@
 
       .error-message {
         @include error-message;
+        ul {
+          padding: 0;
+          li {
+            margin: 0 20px;
+          }
+        }
       }
     }
 

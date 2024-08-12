@@ -71,7 +71,7 @@
 .login-text {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .register-form {
@@ -120,6 +120,20 @@
   font-size: 14px;
   margin-top: 5px;
 }
+.register-form .name .error-message ul,
+.register-form .email .error-message ul,
+.register-form .password .error-message ul,
+.register-form .confirm-password .error-message ul,
+.register-form .agree-checkbox .error-message ul {
+  padding: 0;
+}
+.register-form .name .error-message ul li,
+.register-form .email .error-message ul li,
+.register-form .password .error-message ul li,
+.register-form .confirm-password .error-message ul li,
+.register-form .agree-checkbox .error-message ul li {
+  margin: 0 20px;
+}
 .register-form .signup-button {
   padding: 10px 20px;
   width: 100%;
@@ -150,7 +164,7 @@
 .register-text {
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 body {
