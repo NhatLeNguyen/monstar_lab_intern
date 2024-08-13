@@ -14,5 +14,4 @@ function createErrorMessage(errors) {
   if (errors.length) {
     return errors;
   }
-  return true;
 }

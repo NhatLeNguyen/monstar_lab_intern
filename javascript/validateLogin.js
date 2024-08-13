@@ -8,15 +8,13 @@ function validateLogin() {
   loginValidations.forEach((field) => {
     const element = document.getElementById(field.id);
     const errorElement = element.parentElement.querySelector(".error-message");
-    const isValidation = field.validate(element.value);
-    console.log(isValidation);
+    const errorMessage = field.validate(element.value);
 
-    if (isValidation !== true) {
+    if (errorMessage !== "") {
       isValid = false;
-      errorElement.textContent = isValidation;
+      errorElement.textContent = errorMessage;
       element.classList.add("error");
     } else {
-      console.log("hehe");
       errorElement.textContent = "";
       element.classList.remove("error");
     }

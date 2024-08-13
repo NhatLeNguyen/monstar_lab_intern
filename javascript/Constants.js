@@ -36,44 +36,42 @@ const VALIDATIONS = [
     validate: (value) => {
       if (!value) {
         return ERROR_MESSAGE.NAME;
-      } else {
-        const errors = checkRules(value, ["UPPERCASE", "LOWERCASE"]);
-        return createErrorMessage(errors);
       }
+      const errors = checkRules(value, ["UPPERCASE", "LOWERCASE"]);
+      return createErrorMessage(errors);
     },
   },
   {
     id: "email",
     validate: (value) =>
-      EMAIL_VALIDATION.test(value) ? true : ERROR_MESSAGE.EMAIL,
+      EMAIL_VALIDATION.test(value) ? "" : ERROR_MESSAGE.EMAIL,
   },
   {
     id: "password",
     validate: (value) => {
       if (!value) {
         return ERROR_MESSAGE.PASSWORD;
-      } else {
-        const errors = checkRules(value, [
-          "UPPERCASE",
-          "LOWERCASE",
-          "NUMBER",
-          "SPECIAL",
-          "LENGTH",
-        ]);
-        return createErrorMessage(errors);
       }
+      const errors = checkRules(value, [
+        "UPPERCASE",
+        "LOWERCASE",
+        "NUMBER",
+        "SPECIAL",
+        "LENGTH",
+      ]);
+      return createErrorMessage(errors);
     },
   },
   {
     id: "confirmPassword",
     validate: (value) => {
       const password = document.getElementById("password").value;
-      return value === password ? true : ERROR_MESSAGE.CONFIRM_PASSWORD;
+      return value === password ? "" : ERROR_MESSAGE.CONFIRM_PASSWORD;
     },
   },
   {
     id: "agree",
     validate: () =>
-      document.getElementById("agree").checked ? "true" : ERROR_MESSAGE.AGREE,
+      document.getElementById("agree").checked ? "" : ERROR_MESSAGE.AGREE,
   },
 ];
