@@ -1,0 +1,46 @@
+@import "../colors";
+@import "../mixin";
+
+.register {
+  &-form {
+    @include form-style;
+    @include box-shadow;
+
+    .name,
+    .email,
+    .password,
+    .confirm-password,
+    .agree-checkbox {
+      @include label;
+      input[type="text"],
+      input[type="password"] {
+        @include input-style;
+      }
+
+      .error-message {
+        @include error-message;
+        ul {
+          padding: 0;
+          li {
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+
+    .signup-button {
+      @include button-styles;
+    }
+
+    .login-route {
+      @include route-style;
+      a {
+        @include a-tag-style;
+      }
+    }
+  }
+
+  &-text {
+    @include text-style;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'>
+
+</head>
+
+<body>
+    <main>
+        <form class="register-form" action="" id="registerForm" onsubmit="return validateRegister()">
+            <div class="register-text">Create an Account</div>
+            <p>Create account to get started.</p>
+            <div class="name">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <div class="error-message"></div>
+            </div>
+            <div class="email">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter your email">
+                <div class="error-message"></div>
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter a password">
+                <div class="error-message"></div>
+            </div>
+            <div class="confirm-password">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" placeholder="Enter a password">
+                <div class="error-message"></div>
+            </div>
+            <div class="agree-checkbox">
+                <input type="checkbox" id="agree" name="Agree" />
+                <label for="agree">I agree to the above information</label>
+                <div class="error-message"></div>
+            </div>
+            <button class="signup-button" type="submit">Create Account</button>
+            <div class="login-route">
+                <p>You have an account?</p>
+                <a href="./LoginForm.html">Sign in</a>
+            </div>
+        </form>
+    </main>
+    <script src="./javascript//constants.js"></script>
+    <script src="./javascript/errorMessage.js"></script>
+    <script src="./javascript/validateRegister.js"></script>
+</body>
+
+</html>

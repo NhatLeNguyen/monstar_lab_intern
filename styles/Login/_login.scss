@@ -1,0 +1,44 @@
+@import "../colors";
+@import "../mixin";
+
+.login {
+  &-form {
+    @include form-style;
+    @include box-shadow;
+
+    .email,
+    .password {
+      @include label;
+      input[type="text"],
+      input[type="password"] {
+        @include input-style;
+      }
+      .error-message {
+        @include error-message;
+      }
+    }
+    .password {
+      &-text {
+        display: flex;
+        justify-content: space-between;
+        .forgot-pass {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    .signin-button {
+      @include button-styles;
+    }
+    .register-route {
+      @include route-style;
+      a {
+        @include a-tag-style;
+      }
+    }
+  }
+
+  &-text {
+    @include text-style;
+  }
+}

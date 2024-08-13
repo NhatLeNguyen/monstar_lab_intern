@@ -1,0 +1,74 @@
+// mixin
+
+@mixin form-style {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 50px;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  background-color: $white;
+  margin: 0 auto;
+}
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 10px, $color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin button-styles {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+@mixin label {
+  font-weight: 700;
+  margin-bottom: 25px;
+  width: 95%;
+}
+
+@mixin input-style {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+}
+
+@mixin error-message {
+  color: $red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@mixin route-style {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@mixin a-tag-style {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 10px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin text-style {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
