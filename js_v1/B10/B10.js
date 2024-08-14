@@ -10,8 +10,10 @@ document.getElementById("printButton").addEventListener("click", function () {
   if (isNaN(input) || input === "") {
     output.innerHTML = "1 Vui lòng nhập giá trị số vào ô input";
   } else {
+    let numberLine = "";
     for (let i = 1; i <= input; i++) {
-      output.innerHTML += i + " ";
+      numberLine += i + " ";
     }
+    output.innerHTML = numberLine;
   }
 });

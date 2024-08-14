@@ -8,4 +8,8 @@ let flattened = [
   [5, 6],
 ];
 
-console.log(flattened.flat());
+function flattenArray(arr) {
+  return arr.reduce((result, val) => result.concat(val), []);
+}
+
+console.log(flattenArray(flattened));

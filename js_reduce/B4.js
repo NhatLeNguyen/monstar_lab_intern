@@ -4,11 +4,10 @@
 
 function Count(arr) {
   return arr.reduce((result, item) => {
-    if (result[item]) {
-      result[item] += 1;
-    } else {
-      result[item] = 1;
+    if (!result[item]) {
+      result[item] = 0;
     }
+    result[item] += 1;
     return result;
   }, {});
 }

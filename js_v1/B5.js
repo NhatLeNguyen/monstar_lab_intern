@@ -7,12 +7,11 @@
 
 function camelize(str) {
   let words = str.split("-");
-  console.log(words);
-
+  if (!str.includes("-")) return str;
   for (let i = 1; i < words.length; i++) {
     words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
   }
   return words.join("");
 }
 
-console.log(camelize("-webkit-transition"));
+console.log(camelize("webkittransition"));
